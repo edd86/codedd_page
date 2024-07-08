@@ -23,7 +23,7 @@ let cont = 1;
             href={`https://wa.me/${numbers[0]}?text=Hola ${client.name} quiero contactarte`}
             target="_blank"
           >
-            <img src="/public/icons/whatsapp.webp" alt="whatsapp" />
+            <img src="/icons/whatsapp" alt="whatsapp" />
             <p>whatsapp</p>
           </a>
         </div>
@@ -33,7 +33,7 @@ let cont = 1;
           return (
             <div class="icon">
               <a href={linkWhapp} target="_blank">
-                <img src="/public/icons/whatsapp.webp" alt="whatsapp" />
+                <img src="/icons/whatsapp.webp" alt="whatsapp" />
                 <p>whatsapp {cont++}</p>
               </a>
             </div>
@@ -44,7 +44,7 @@ let cont = 1;
     {
       social_networks.map((social_network) => {
         let net = social_network.split(".")[1];
-        let source = `/public/icons/${net}.webp`;
+        let source = `/icons/${net}.webp`;
         return (
           <div class="icon">
             <a href={social_network} target="_blank">
