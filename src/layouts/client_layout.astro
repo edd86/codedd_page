@@ -1,0 +1,84 @@
+---
+const { cliente } = Astro.props;
+const sourceLogo = `../../public/${cliente._id}/logo.webp`;
+const portadaLogo = `../../public/${cliente._id}/portada.webp`;
+---
+
+<!doctype html>
+<html lang="en">
+  <>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{cliente.name}</title>
+  </>
+  <body>
+    <div class="profile-header">
+      <div class="cover-profile">
+        <img src={portadaLogo} alt={cliente.name} />
+      </div>
+    </div>
+    <div class="profile-details">
+      <div class="profile-image">
+        <img src={sourceLogo} alt={cliente.name} />
+      </div>
+      <div class="profile-info">
+        <h1>{cliente.name}</h1>
+        <p class="rubro">{cliente.rubro}</p>
+        <p class="slogan">{cliente.slogan}</p>
+      </div>
+    </div>
+    <slot />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap");
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Wittgenstein", sans-serif;
+      }
+      p {
+        margin: 0;
+      }
+
+      .profile-header {
+        width: 100%;
+        position: relative;
+      }
+      .cover-profile img {
+        width: 100%;
+        height: 300px;
+        overflow: fit;
+      }
+      .profile-details {
+        display: flex;
+        align-items: center;
+        padding: 0px 15px 5px 10px;
+        position: relative;
+        background-color: black;
+        flex-wrap: wrap;
+      }
+      .profile-image {
+        position: absolute;
+        top: -70px;
+        left: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      .profile-image img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .profile-info {
+        margin-left: 170px;
+        flex: 1;
+      }
+      .profile-info h1 {
+        padding-top: 0px;
+        font-size: 2rem;
+        margin: 0;
+        font-weight: bold;
+      }
+    </style>
+  </body>
+</html>

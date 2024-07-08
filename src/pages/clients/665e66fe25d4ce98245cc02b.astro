@@ -1,0 +1,98 @@
+---
+import ClientLayout from "../../layouts/client_layout.astro";
+
+let url = Astro.url.pathname;
+let id = url.split("/").pop();
+
+let response = await fetch(`http://localhost:3000/api/clients/${id}`);
+let client = await response.json();
+
+let social_networks = client.socialNetworks;
+let numbers = client.phone;
+let cont = 1;
+
+//https://wa.me/59175793003?text=Hola%quiero%contactarte
+---
+
+<ClientLayout title={client.name} cliente={client}>
+  <div class="social-networks">
+    {
+      numbers.length === 1 ? (
+        <div class="icon">
+          <a
+            href={`https://wa.me/${numbers[0]}?text=Hola ${client.name} quiero contactarte`}
+            target="_blank"
+          >
+            <img src="../../../public/icons/whatsapp.webp" alt="whatsapp" />
+            <p>whatsapp</p>
+          </a>
+        </div>
+      ) : (
+        numbers.map((number) => {
+          let linkWhapp = `https://wa.me/${number}?text=Hola ${client.name} quiero contactarte`;
+          return (
+            <div class="icon">
+              <a href={linkWhapp} target="_blank">
+                <img src="../../../public/icons/whatsapp.webp" alt="whatsapp" />
+                <p>whatsapp {cont++}</p>
+              </a>
+            </div>
+          );
+        })
+      )
+    }
+    {
+      social_networks.map((social_network) => {
+        let net = social_network.split(".")[1];
+        let source = `../../../public/icons/${net}.webp`;
+        return (
+          <div class="icon">
+            <a href={social_network} target="_blank">
+              <img src={source} alt={net} />
+              <p>{net}</p>
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+</ClientLayout>
+<style>
+  .social-networks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px 60px;
+    background-color: rgb(48, 48, 48);
+    max-width: 650px;
+    margin: 20px auto;
+  }
+  .icon {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+    text-align: center;
+  }
+  .icon a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+  }
+  .icon img:hover {
+    transform: scale(1.2);
+  }
+  .icon p {
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+    color: white;
+    font-style: normal;
+    align-self: center;
+  }
+</style>
