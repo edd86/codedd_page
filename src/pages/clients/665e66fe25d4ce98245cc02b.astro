@@ -4,14 +4,14 @@ import ClientLayout from "../../layouts/client_layout.astro";
 let url = Astro.url.pathname;
 let id = url.split("/").pop();
 
-let response = await fetch(`http://localhost:3000/api/clients/${id}`);
+let response = await fetch(
+  `https://virtual-cards-api-zeta.vercel.app/api/clients/${id}`
+);
 let client = await response.json();
 
 let social_networks = client.socialNetworks;
 let numbers = client.phone;
 let cont = 1;
-
-//https://wa.me/59175793003?text=Hola%quiero%contactarte
 ---
 
 <ClientLayout title={client.name} cliente={client}>
