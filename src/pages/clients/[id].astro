@@ -11,6 +11,7 @@ let client = await response.json();
 
 let social_networks = client.socialNetworks;
 let numbers = client.phone;
+let locations = client.location;
 let cont = 1;
 ---
 
@@ -24,7 +25,7 @@ let cont = 1;
             target="_blank"
           >
             <img src="/icons/whatsapp" alt="whatsapp" />
-            <p>whatsapp</p>
+            <p>WHATSAPP</p>
           </a>
         </div>
       ) : (
@@ -34,7 +35,7 @@ let cont = 1;
             <div class="icon">
               <a href={linkWhapp} target="_blank">
                 <img src="/icons/whatsapp.webp" alt="whatsapp" />
-                <p>whatsapp {cont++}</p>
+                <p>WHATSAPP {cont++}</p>
               </a>
             </div>
           );
@@ -49,11 +50,32 @@ let cont = 1;
           <div class="icon">
             <a href={social_network} target="_blank">
               <img src={source} alt={net} />
-              <p>{net}</p>
+              <p>{net.toUpperCase()}</p>
             </a>
           </div>
         );
       })
+    }
+    {
+      locations.length === 1 ? (
+        <div class="icon">
+          <a href={locations[0]} target="_blank">
+            <img src="/icons/map.webp" alt="location" />
+            <p>LOCATION</p>
+          </a>
+        </div>
+      ) : (
+        locations.map((location) => {
+          return (
+            <div class="icon">
+              <a href={location} target="_blank">
+                <img src="/icons/map.webp" alt="location" />
+                <p>LOCATION</p>
+              </a>
+            </div>
+          );
+        })
+      )
     }
   </div>
 </ClientLayout>
