@@ -5,7 +5,7 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,11 +34,16 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
       @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
       body {
-        background-color: black;
+        background: linear-gradient(
+          0deg,
+          rgb(0, 6, 15) 30%,
+          rgb(124, 124, 124) 80%
+        );
         color: white;
         font-family: "Ubuntu", sans-serif;
         justify-content: center;
         align-items: center;
+        margin: 0;
       }
 
       p {
@@ -62,7 +67,6 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
         align-items: center;
         padding: 0px 10px 5px 10px;
         position: relative;
-        background-color: black;
         flex-wrap: wrap;
       }
 

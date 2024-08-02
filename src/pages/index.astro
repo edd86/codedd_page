@@ -8,9 +8,60 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Codedd-Developing Dreams</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <div class="header">
+      <div class="header-logo">
+        <h1>Codedd</h1>
+      </div>
+      <h3>-Developing Dreams-</h3>
+    </div>
   </body>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+    * {
+      background: -webkit-linear-gradient(
+        90deg,
+        #131260,
+        #004878,
+        #494454
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        90deg,
+        #131260,
+        #004878,
+        #494454
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    body {
+      color: white;
+      font-family: "Ubuntu", sans-serif;
+    }
+
+    .header {
+      position: relative;
+      display: flexbox;
+    }
+
+    .header-logo {
+      position: inherit;
+      margin-inline-start: 50;
+    }
+
+    .header h1 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      font-size: 3rem;
+    }
+
+    .header h3 {
+      display: flex;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+  </style>
 </html>
