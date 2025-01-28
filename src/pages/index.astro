@@ -1,67 +1,62 @@
 ---
-
+import BaseLayout from "../layouts/base_layout.astro";
 ---
 
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Codedd-Developing Dreams</title>
-  </head>
-  <body>
-    <div class="header">
-      <div class="header-logo">
-        <h1>CodEDD</h1>
+<BaseLayout>
+  <section id="hero">
+    <h1>Hola, soy Edward (CodEDD)</h1>
+    <p>Desarrollador Web | Desarrollador de Apps</p>
+    <a href="#about" class="btn"></a>
+  </section>
+
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un desarrollador y amante de la tecnología.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>Astro</li>
+      <li>Node</li>
+      <li>C#</li>
+      <li>.Net</li>
+      <li>Flutter</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto.</p>
+        <a href="#" class="btn">Ver proyecto</a>
       </div>
-      <h3>-Developing Dreams-</h3>
+      <div class="project-card">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto</p>
+        <a href="#" class="btn">Ver proyecto</a>
+      </div>
     </div>
-  </body>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-    * {
-      background: -webkit-linear-gradient(
-        90deg,
-        #131260,
-        #004878,
-        #494454
-      ); /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(
-        90deg,
-        #131260,
-        #004878,
-        #494454
-      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    }
+  </section>
 
-    body {
-      color: white;
-      font-family: "Ubuntu", sans-serif;
-    }
+  <section id="contact">
+    <h2>Contacto</h2>
+    <form action="#" method="post">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
 
-    .header {
-      position: relative;
-      display: flexbox;
-    }
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
 
-    .header-logo {
-      position: inherit;
-      margin-inline-start: 50;
-    }
+      <label for="message">Mensaje:</label>
+      <textarea name="message" id="message" required></textarea>
 
-    .header h1 {
-      margin-block-start: 0;
-      margin-block-end: 0;
-      font-size: 3rem;
-    }
-
-    .header h3 {
-      display: flex;
-      margin-block-start: 0;
-      margin-block-end: 0;
-      margin-inline-start: 0;
-      margin-inline-end: 0;
-    }
-  </style>
-</html>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+</BaseLayout>
