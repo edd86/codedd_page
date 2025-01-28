@@ -14,11 +14,6 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
     <link rel="icon" type="image/png" href=`/${cliente._id}/logo.webp` />
   </>
   <body>
-    <div class="profile-header">
-      <div class="cover-profile">
-        <img src={portadaLogo} alt={cliente.name} />
-      </div>
-    </div>
     <div class="profile-details">
       <div class="profile-image">
         <img src={sourceLogo} alt={cliente.name} />
@@ -26,7 +21,6 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
       <div class="profile-info">
         <h1>{cliente.name}</h1>
         <p class="rubro">{cliente.rubro}</p>
-        <p class="slogan">{cliente.slogan}</p>
       </div>
     </div>
     <slot />
@@ -39,57 +33,45 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
           rgb(0, 6, 15) 30%,
           rgb(124, 124, 124) 80%
         );
-        color: white;
+        margin: 0;
+        padding: 0;
         font-family: "Ubuntu", sans-serif;
+        color: white;
+        display: block;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        height: 100vh;
       }
 
       p {
         margin: 0;
       }
 
-      .profile-header {
-        width: 100%;
-        position: relative;
-      }
-
-      .cover-profile img {
-        width: 100%;
-        height: 20vh;
-        /*overflow: fit;*/
-        object-fit: cover;
-      }
-
       .profile-details {
-        display: flex;
-        align-items: center;
-        padding: 0px 10px 5px 10px;
-        position: relative;
-        flex-wrap: wrap;
+        /*background-color: #333;*/
+        width: 300px;
+        padding: 20px;
+        border-radius: 10px;
+        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
       }
 
       .profile-image {
-        position: absolute;
-        top: -65px;
-        left: 10px;
+        width: 160px;
+        height: 160px;
+        margin: auto;
         border-radius: 50%;
+        align-items: center;
         overflow: hidden;
       }
 
       .profile-image img {
-        width: 130px;
-        height: 130px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
       }
 
-      .profile-info {
-        margin-left: 140px;
-        flex: 1;
-      }
-
       .profile-info h1 {
+        text-align: center;
         font-size: 1.8rem;
         padding-top: 0px;
         margin: 0 0 5px 0;
@@ -97,18 +79,8 @@ const portadaLogo = `/${cliente._id}/portada.webp`;
       }
 
       .rubro {
+        text-align: center;
         font-size: 0.9rem;
-      }
-
-      .slogan {
-        font-size: 0.7rem;
-      }
-
-      @media screen and (min-width: 900px) {
-        .cover-profile img {
-          height: 50vh;
-          object-fit: fill;
-        }
       }
     </style>
   </body>
