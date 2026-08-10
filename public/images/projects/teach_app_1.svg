@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" fill="#0a0a0a" rx="16"/>
+  <rect width="798" height="498" x="1" y="1" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" rx="15"/>
+  <circle cx="400" cy="250" r="140" fill="#a855f7" opacity="0.1"/>
+
+  <!-- Phone Frame 1 -->
+  <rect x="180" y="40" width="200" height="420" rx="24" fill="#131313" stroke="#a855f7" stroke-width="2"/>
+  <rect x="230" y="50" width="100" height="12" rx="6" fill="#2a2a2a"/>
+  <!-- Phone Content 1 -->
+  <rect x="200" y="80" width="160" height="35" rx="8" fill="#a855f7"/>
+  <text x="280" y="102" fill="#ffffff" font-family="sans-serif" font-weight="bold" font-size="13" text-anchor="middle">Plataforma Edu</text>
+  <rect x="200" y="130" width="160" height="80" rx="10" fill="#1c1b1b" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="230" cy="170" r="18" fill="#06b6d4"/>
+  <rect x="260" y="155" width="85" height="10" rx="4" fill="#ffffff"/>
+  <rect x="260" y="175" width="60" height="8" rx="4" fill="#988d9f"/>
+  <rect x="200" y="225" width="160" height="80" rx="10" fill="#1c1b1b" stroke="rgba(255,255,255,0.1)"/>
+  <circle cx="230" cy="265" r="18" fill="#a855f7"/>
+  <rect x="260" y="250" width="85" height="10" rx="4" fill="#ffffff"/>
+  <rect x="260" y="270" width="60" height="8" rx="4" fill="#988d9f"/>
+
+  <!-- Phone Frame 2 -->
+  <rect x="420" y="40" width="200" height="420" rx="24" fill="#131313" stroke="#06b6d4" stroke-width="2"/>
+  <rect x="470" y="50" width="100" height="12" rx="6" fill="#2a2a2a"/>
+  <rect x="440" y="80" width="160" height="120" rx="12" fill="url(#bgGrad)" stroke="#06b6d4" stroke-width="1"/>
+  <text x="520" y="130" fill="#06b6d4" font-family="sans-serif" font-weight="bold" font-size="14" text-anchor="middle">Flutter UI</text>
+  <rect x="440" y="215" width="160" height="40" rx="8" fill="#06b6d4"/>
+  <text x="520" y="240" fill="#000000" font-family="sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Ingresar a Clase</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" fill="#0a0a0a" rx="16"/>
+  <rect x="50" y="50" width="700" height="400" rx="12" fill="#131313" stroke="#e535ab" stroke-width="1.5"/>
+  <text x="80" y="95" fill="#e535ab" font-family="monospace" font-size="18" font-weight="bold">GraphQL Server — Licorería Backend</text>
+  <rect x="80" y="120" width="310" height="300" rx="8" fill="#1c1b1b"/>
+  <text x="100" y="150" fill="#a855f7" font-family="monospace" font-size="13">query GetCatalog {</text>
+  <text x="120" y="175" fill="#06b6d4" font-family="monospace" font-size="13">products(category: "WINE") {</text>
+  <text x="140" y="200" fill="#ffffff" font-family="monospace" font-size="13">id name price stock</text>
+  <text x="120" y="225" fill="#06b6d4" font-family="monospace" font-size="13">}</text>
+  <text x="100" y="250" fill="#a855f7" font-family="monospace" font-size="13">}</text>
+  <rect x="410" y="120" width="310" height="300" rx="8" fill="#1c1b1b"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" fill="#0a0a0a" rx="16"/>
+  <rect x="250" y="30" width="300" height="440" rx="20" fill="#131313" stroke="#06b6d4" stroke-width="2"/>
+  <text x="400" y="75" fill="#06b6d4" font-family="sans-serif" font-size="16" font-weight="bold" text-anchor="middle">Control Contable</text>
+  <rect x="280" y="95" width="240" height="90" rx="10" fill="#1c1b1b" stroke="#a855f7" stroke-width="1"/>
+  <text x="300" y="125" fill="#988d9f" font-family="sans-serif" font-size="12">Balance Total</text>
+  <text x="300" y="160" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold">$ 14,850.00</text>
+  <polyline points="290,260 340,240 390,250 440,210 490,220" fill="none" stroke="#06b6d4" stroke-width="3"/>
+  <rect x="280" y="290" width="240" height="40" rx="8" fill="#1c1b1b"/>
+  <rect x="280" y="340" width="240" height="40" rx="8" fill="#1c1b1b"/>
+</svg>
