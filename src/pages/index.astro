@@ -1,62 +1,19 @@
 ---
 import BaseLayout from "../layouts/base_layout.astro";
+import BentoHero from "../components/BentoHero.astro";
+import BentoSkills from "../components/BentoSkills.astro";
+import BentoProjects from "../components/BentoProjects.astro";
+import BentoEducation from "../components/BentoEducation.astro";
+import BentoContact from "../components/BentoContact.astro";
 ---
 
 <BaseLayout>
-  <section id="hero">
-    <h1>Hola, soy Edward (CodEDD)</h1>
-    <p>Desarrollador Web | Desarrollador de Apps</p>
-    <a href="#about" class="btn"></a>
-  </section>
-
-  <section id="about">
-    <h2>Sobre mí</h2>
-    <p>Soy un desarrollador y amante de la tecnología.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Habilidades</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Astro</li>
-      <li>Node</li>
-      <li>C#</li>
-      <li>.Net</li>
-      <li>Flutter</li>
-    </ul>
-  </section>
-
-  <section id="projects">
-    <h2>Proyectos</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Proyecto 1</h3>
-        <p>Descripción breve del proyecto.</p>
-        <a href="#" class="btn">Ver proyecto</a>
-      </div>
-      <div class="project-card">
-        <h3>Proyecto 2</h3>
-        <p>Descripción breve del proyecto</p>
-        <a href="#" class="btn">Ver proyecto</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contacto</h2>
-    <form action="#" method="post">
-      <label for="name">Nombre:</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" required />
-
-      <label for="message">Mensaje:</label>
-      <textarea name="message" id="message" required></textarea>
-
-      <button type="submit" class="btn">Enviar</button>
-    </form>
-  </section>
+  <!-- Lumina Grid Bento Layout Structure -->
+  <div class="space-y-16">
+    <BentoHero />
+    <BentoSkills />
+    <BentoProjects />
+    <BentoEducation />
+    <BentoContact />
+  </div>
 </BaseLayout>
