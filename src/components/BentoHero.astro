@@ -1,0 +1,121 @@
+---
+import { profileData } from "../data/profile";
+---
+
+<section id="hero" class="w-full">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Main Hero Card (8 cols) -->
+    <div class="lg:col-span-8 bento-card p-6 sm:p-8 flex flex-col justify-between relative group">
+      <!-- Glow element -->
+      <div class="absolute -top-24 -right-24 w-72 h-72 bg-primary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/30 transition-all duration-500"></div>
+
+      <div>
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <!-- Availability Tag -->
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 stroke-emerald-500 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Disponible para Proyectos &amp; Freelance
+          </span>
+          <!-- Location Badge -->
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 text-neutral-variant text-xs border border-white/10">
+            📍 {profileData.location}
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Hola, soy <span class="text-gradient">{profileData.name}</span>
+        </h1>
+        <p class="text-lg sm:text-xl font-display font-semibold text-secondary mt-1">
+          {profileData.title} &amp; Full-Stack Creator
+        </p>
+
+        <p class="text-neutral-variant text-sm sm:text-base mt-4 leading-relaxed max-w-2xl">
+          {profileData.bio}
+        </p>
+      </div>
+
+      <!-- Quick Tech Pills & Action Buttons -->
+      <div class="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1 rounded-lg bg-primary/10 text-primary text-xs font-medium border border-primary/20">Flutter 3+ Años</span>
+          <span class="px-3 py-1 rounded-lg bg-secondary/10 text-secondary text-xs font-medium border border-secondary/20">Node.js / Express</span>
+          <span class="px-3 py-1 rounded-lg bg-white/5 text-white text-xs font-medium border border-white/10">C# / .NET</span>
+          <span class="px-3 py-1 rounded-lg bg-white/5 text-white text-xs font-medium border border-white/10">Astro &amp; Vue.js</span>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="#projects"
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-secondary text-white text-sm font-semibold shadow-glow-primary hover:opacity-90 transition-all"
+          >
+            Ver Proyectos
+          </a>
+          <a
+            href="#contact"
+            class="px-5 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 text-white text-sm font-medium border border-white/10 transition-colors"
+          >
+            Contacto Directo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats & Identity Card (4 cols) -->
+    <div class="lg:col-span-4 bento-card p-6 sm:p-8 flex flex-col justify-between relative group">
+      <div class="absolute -bottom-20 -left-20 w-60 h-60 bg-secondary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-secondary/30 transition-all duration-500"></div>
+
+      <div class="flex items-center gap-4">
+        <!-- Avatar / Initial logo -->
+        <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary via-purple-600 to-secondary p-0.5 shadow-xl">
+          <div class="w-full h-full bg-[#131313] rounded-[14px] flex items-center justify-center font-display font-black text-2xl text-gradient">
+            ED
+          </div>
+        </div>
+        <div>
+          <h2 class="font-display font-bold text-white text-lg">@edd86</h2>
+          <p class="text-xs text-neutral-muted">GitHub: edd86</p>
+          <a
+            href={profileData.contact.githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs text-secondary hover:underline inline-flex items-center gap-1 mt-1"
+          >
+            github.com/edd86 &rarr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Key Metrics -->
+      <div class="grid grid-cols-2 gap-3 my-6">
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 text-center">
+          <span class="block font-display font-extrabold text-2xl text-primary">3+</span>
+          <span class="text-xs text-neutral-muted">Años Flutter</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-white/5 border border-white/10 text-center">
+          <span class="block font-display font-extrabold text-2xl text-secondary">13+</span>
+          <span class="text-xs text-neutral-muted">Proyectos &amp; Exp</span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-2">
+        <a
+          href={profileData.contact.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white flex items-center justify-between transition-colors"
+        >
+          <span>Perfil de LinkedIn</span>
+          <span>&rarr;</span>
+        </a>
+        <a
+          href={`mailto:${profileData.contact.email}`}
+          class="w-full py-2.5 px-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-semibold text-white flex items-center justify-between transition-colors"
+        >
+          <span>{profileData.contact.email}</span>
+          <span>✉</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

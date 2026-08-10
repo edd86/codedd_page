@@ -1,0 +1,71 @@
+---
+import { profileData } from "../data/profile";
+---
+
+<section id="education" class="w-full my-12">
+  <div class="mb-6">
+    <span class="text-xs font-mono font-semibold tracking-widest text-primary uppercase">Estudios &amp; Capacitaciones</span>
+    <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white mt-1">Formación Académica &amp; Idiomas</h2>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+    <!-- Education Timeline (8 cols) -->
+    <div class="lg:col-span-8 bento-card p-6 sm:p-8">
+      <div class="space-y-6">
+        {profileData.education.map((edu, idx) => (
+          <div class="flex items-start gap-4 group">
+            <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-primary group-hover:border-primary transition-colors flex-shrink-0">
+              🎓
+            </div>
+
+            <div class="flex-1 pb-4 border-b border-white/5 last:border-none">
+              <h3 class="font-display font-bold text-white text-base group-hover:text-secondary transition-colors">
+                {edu.title}
+              </h3>
+              <p class="text-xs text-neutral-variant mt-0.5">
+                {edu.institution}
+              </p>
+              <span class="text-[11px] font-mono text-neutral-muted mt-1 inline-block">
+                📍 {edu.location}
+              </span>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Languages & Methodology Card (4 cols) -->
+    <div class="lg:col-span-4 space-y-4">
+      <!-- Languages Card -->
+      <div class="bento-card p-6">
+        <h3 class="font-display font-bold text-white text-base mb-4 flex items-center gap-2">
+          <span>🌐 Idiomas</span>
+        </h3>
+        <div class="space-y-3">
+          {profileData.languages.map((lang) => (
+            <div class="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/10">
+              <span class="font-semibold text-white text-sm">{lang.language}</span>
+              <span class="text-xs font-mono px-2 py-1 rounded bg-primary/20 text-primary font-bold">{lang.level}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Agile & Work Style Card -->
+      <div class="bento-card p-6 bg-gradient-to-br from-[#131313] to-[#1c1b1b]">
+        <h3 class="font-display font-bold text-white text-base mb-2">⚡ Metodología &amp; Valores</h3>
+        <ul class="text-xs text-neutral-variant space-y-2 font-mono">
+          <li class="flex items-center gap-2">
+            <span class="text-secondary">✓</span> SCRUM Framework &amp; Trabajo en Equipo
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-secondary">✓</span> Creatividad &amp; Resolución de Problemas
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="text-secondary">✓</span> Aprendizaje Continuo &amp; Calidad
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

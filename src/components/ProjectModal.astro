@@ -1,0 +1,233 @@
+---
+---
+
+<!-- Interactive Project Lightbox & Details Modal Dialog -->
+<div
+  id="project-modal"
+  class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-md p-4 overflow-y-auto"
+  role="dialog"
+  aria-modal="true"
+>
+  <div class="relative w-full max-w-4xl bg-[#131313] border border-white/10 rounded-2xl shadow-2xl overflow-hidden my-8 transform transition-all">
+    <!-- Modal Header -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#1c1b1b]">
+      <div class="flex items-center gap-3">
+        <span id="modal-category" class="px-2.5 py-1 rounded-md bg-primary/20 text-primary text-xs font-mono font-bold uppercase">
+          CATEGORIA
+        </span>
+        <h3 id="modal-title" class="font-display font-extrabold text-white text-lg sm:text-xl">
+          Título del Proyecto
+        </h3>
+      </div>
+
+      <button
+        id="close-modal-btn"
+        class="w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-neutral-variant hover:text-white flex items-center justify-center transition-colors"
+        aria-label="Cerrar modal"
+      >
+        ✕
+      </button>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-6 space-y-6 max-h-[75vh] overflow-y-auto">
+      <!-- Main Image Display & Gallery Selector -->
+      <div class="space-y-3">
+        <div class="relative w-full h-64 sm:h-96 rounded-xl overflow-hidden bg-[#0a0a0a] border border-white/10 flex items-center justify-center">
+          <img
+            id="modal-main-image"
+            src=""
+            alt="Project Preview"
+            class="w-full h-full object-contain"
+          />
+        </div>
+        <p id="modal-image-caption" class="text-xs font-mono text-center text-neutral-muted">
+          Caption de la imagen
+        </p>
+
+        <!-- Thumbnails strip -->
+        <div id="modal-thumbnails" class="flex items-center justify-center gap-2 pt-2">
+          <!-- Thumbnails will be injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Project Metadata Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-xl bg-white/5 border border-white/10">
+        <div>
+          <span class="block text-xs font-mono text-neutral-muted">Rol / Cargo</span>
+          <span id="modal-role" class="font-semibold text-white text-sm">Desarrollador</span>
+        </div>
+        <div>
+          <span class="block text-xs font-mono text-neutral-muted">Periodo</span>
+          <span id="modal-period" class="font-semibold text-white text-sm">2025</span>
+        </div>
+        <div>
+          <span class="block text-xs font-mono text-neutral-muted">Ubicación &amp; Cliente</span>
+          <span id="modal-location" class="font-semibold text-secondary text-sm">Sucre, Bolivia</span>
+        </div>
+      </div>
+
+      <!-- Full Description -->
+      <div>
+        <h4 class="font-display font-bold text-white text-base mb-2">Descripción General</h4>
+        <p id="modal-description" class="text-neutral-variant text-sm sm:text-base leading-relaxed">
+          Descripción detallada del proyecto.
+        </p>
+      </div>
+
+      <!-- Tech Stack Tags -->
+      <div>
+        <h4 class="font-display font-bold text-white text-sm mb-2">Tecnologías Utilizadas</h4>
+        <div id="modal-tags" class="flex flex-wrap gap-2">
+          <!-- Tags injected dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Footer Actions -->
+    <div class="flex items-center justify-between px-6 py-4 border-t border-white/10 bg-[#1c1b1b]">
+      <a
+        id="modal-repo-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium border border-white/10 transition-colors"
+      >
+        <span>📁 Ver Repositorio en GitHub</span>
+      </a>
+
+      <button
+        id="close-modal-bottom-btn"
+        class="px-4 py-2 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+      >
+        Cerrar
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  import { projects } from "../data/projects";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("project-modal");
+    const closeModalBtn = document.getElementById("close-modal-btn");
+    const closeModalBottomBtn = document.getElementById("close-modal-bottom-btn");
+
+    const modalCategory = document.getElementById("modal-category");
+    const modalTitle = document.getElementById("modal-title");
+    const modalMainImg = document.getElementById("modal-main-image") as HTMLImageElement;
+    const modalImgCaption = document.getElementById("modal-image-caption");
+    const modalThumbnails = document.getElementById("modal-thumbnails");
+    const modalRole = document.getElementById("modal-role");
+    const modalPeriod = document.getElementById("modal-period");
+    const modalLocation = document.getElementById("modal-location");
+    const modalDesc = document.getElementById("modal-description");
+    const modalTags = document.getElementById("modal-tags");
+    const modalRepoLink = document.getElementById("modal-repo-link") as HTMLAnchorElement;
+
+    function openModal(projectId: string) {
+      const project = projects.find((p) => p.id === projectId);
+      if (!project || !modal) return;
+
+      if (modalCategory) modalCategory.textContent = project.category.toUpperCase();
+      if (modalTitle) modalTitle.textContent = project.title;
+      if (modalRole) modalRole.textContent = project.role;
+      if (modalPeriod) modalPeriod.textContent = project.period;
+      if (modalLocation) modalLocation.textContent = `${project.location} ${project.companyOrClient ? `(${project.companyOrClient})` : ''}`;
+      if (modalDesc) modalDesc.textContent = project.fullDescription || project.description;
+
+      // Repository link
+      if (modalRepoLink) {
+        if (project.repository) {
+          modalRepoLink.href = project.repository;
+          modalRepoLink.style.display = "inline-flex";
+        } else {
+          modalRepoLink.style.display = "none";
+        }
+      }
+
+      // Tech tags
+      if (modalTags) {
+        modalTags.innerHTML = project.tags
+          .map(
+            (tag) =>
+              `<span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-mono text-secondary">${tag}</span>`
+          )
+          .join("");
+      }
+
+      // Images Gallery setup
+      if (project.images && project.images.length > 0) {
+        setMainImage(project.images[0].url, project.images[0].caption || project.images[0].alt || "");
+
+        if (modalThumbnails) {
+          modalThumbnails.innerHTML = project.images
+            .map(
+              (img, idx) => `
+            <button
+              data-img-url="${img.url}"
+              data-img-caption="${img.caption || img.alt || ''}"
+              class="thumb-btn w-16 h-12 rounded-lg overflow-hidden border-2 ${idx === 0 ? 'border-primary' : 'border-white/20'} hover:border-secondary transition-all"
+            >
+              <img src="${img.url}" alt="${img.alt || ''}" class="w-full h-full object-cover"/>
+            </button>
+          `
+            )
+            .join("");
+
+          // Thumbnail click handlers
+          const thumbBtns = modalThumbnails.querySelectorAll(".thumb-btn");
+          thumbBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              const url = btn.getAttribute("data-img-url");
+              const caption = btn.getAttribute("data-img-caption");
+              if (url) {
+                setMainImage(url, caption || "");
+                thumbBtns.forEach((b) => {
+                  b.classList.remove("border-primary");
+                  b.classList.add("border-white/20");
+                });
+                btn.classList.remove("border-white/20");
+                btn.classList.add("border-primary");
+              }
+            });
+          });
+        }
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      document.body.style.overflow = "hidden";
+    }
+
+    function setMainImage(url: string, caption: string) {
+      if (modalMainImg) modalMainImg.src = url;
+      if (modalImgCaption) modalImgCaption.textContent = caption;
+    }
+
+    function closeModal() {
+      if (!modal) return;
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = "auto";
+    }
+
+    // Attach click listeners to all project card triggers
+    document.querySelectorAll("[data-open-modal]").forEach((trigger) => {
+      trigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        const projectId = (trigger as HTMLElement).getAttribute("data-project-id");
+        if (projectId) openModal(projectId);
+      });
+    });
+
+    closeModalBtn?.addEventListener("click", closeModal);
+    closeModalBottomBtn?.addEventListener("click", closeModal);
+
+    // Close on clicking backdrop
+    modal?.addEventListener("click", (e) => {
+      if (e.target === modal) closeModal();
+    });
+  });
+</script>
