@@ -1,18 +1,17 @@
 ---
 const { cliente } = Astro.props;
 const sourceLogo = `/${cliente._id}/logo.webp`;
-//const portadaLogo = `/${cliente._id}/portada.webp`;
 ---
 
 <!doctype html>
 <html lang="es">
-  <>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{cliente.name}</title>
-    <link rel="icon" type="image/png" href=`/${cliente._id}/logo.webp` />
-  </>
+    <link rel="icon" type="image/png" href={`/${cliente._id}/logo.webp`} />
+  </head>
   <body>
     <div class="profile-details">
       <div class="profile-image">
@@ -48,11 +47,9 @@ const sourceLogo = `/${cliente._id}/logo.webp`;
       }
 
       .profile-details {
-        /*background-color: #333;*/
         width: 300px;
         padding: 20px;
         border-radius: 10px;
-        /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
       }
 
       .profile-image {
