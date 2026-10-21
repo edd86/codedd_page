@@ -23,6 +23,32 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "riskhub-tech",
+    title: "RiskHub – Plataforma Web Corporativa & Ciberseguridad",
+    role: "Desarrollador Web Frontend & UI/UX",
+    period: "2024 – Presente",
+    location: "Sucre, Bolivia",
+    companyOrClient: "RiskHub Tech",
+    description: "Plataforma web oficial para consultora líder en ciberseguridad, pentesting, auditorías ISO 27001 y continuidad del negocio en Bolivia y LATAM.",
+    fullDescription: "Diseño y desarrollo de la plataforma web corporativa de RiskHub (https://riskhub.tech/). Cuenta con arquitectura frontend moderna y optimizada en React, TypeScript y Tailwind CSS; diseño UI/UX responsivo con paleta especializada en ciberseguridad, catálogo interactivo de servicios (Red Team, Pentesting OWASP, Auditorías ISO 27001/22301, OSINT y planes DRP/BCP), desglose metodológico por fases con cálculo de severidad CVSS 4.0, alta optimización SEO con metadatos OpenGraph y Schema.org estructurados, y rendimiento de carga ultrarrápido.",
+    category: "web",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite", "Ciberseguridad", "UI/UX", "SEO", "Responsive"],
+    demoUrl: "https://riskhub.tech/",
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/riskhub_1.svg",
+        alt: "Plataforma Web RiskHub Ciberseguridad",
+        caption: "Hero interactivo y panel de diagnóstico de ciberseguridad en RiskHub Tech"
+      },
+      {
+        url: "/images/projects/riskhub_2.svg",
+        alt: "Matriz de Servicios RiskHub",
+        caption: "Catálogo especializado de servicios: Red Team, Pentesting, ISO 27001 y Continuidad del Negocio"
+      }
+    ]
+  },
+  {
     id: "meow-meow-pos",
     title: "Meow Meow – Sistema POS & Gestión Kawaii Boutique",
     role: "Desarrollador Full Stack & Frontend",

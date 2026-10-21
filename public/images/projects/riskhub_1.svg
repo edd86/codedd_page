@@ -1,0 +1,211 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="cyberBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14"/>
+      <stop offset="40%" stop-color="#0e1626"/>
+      <stop offset="100%" stop-color="#060911"/>
+    </linearGradient>
+
+    <!-- Crimson Cyber Glow -->
+    <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3838"/>
+      <stop offset="100%" stop-color="#E73324"/>
+    </linearGradient>
+
+    <!-- Cyan Accent Glow -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141E33" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0B1220" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <filter id="crimsonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="url(#cyberBg)"/>
+  <rect width="798" height="498" x="1" y="1" rx="15" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- Ambient Cyber Lighting -->
+  <circle cx="120" cy="100" r="90" fill="#E73324" opacity="0.12" filter="url(#crimsonGlow)"/>
+  <circle cx="700" cy="400" r="120" fill="#38BDF8" opacity="0.08" filter="url(#softGlow)"/>
+
+  <!-- Subtle Cyber Grid -->
+  <g stroke="rgba(255,255,255,0.03)" stroke-width="1">
+    <line x1="0" y1="80" x2="800" y2="800"/>
+    <line x1="0" y1="140" x2="800" y2="140"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="260" x2="800" y2="260"/>
+    <line x1="0" y1="320" x2="800" y2="320"/>
+    <line x1="0" y1="380" x2="800" y2="380"/>
+    <line x1="0" y1="440" x2="800" y2="440"/>
+    <line x1="100" y1="0" x2="100" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="500" y1="0" x2="500" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="700" y1="0" x2="700" y2="500"/>
+  </g>
+
+  <!-- Browser Frame Wrapper -->
+  <rect x="36" y="30" width="728" height="440" rx="12" fill="#0d1424" stroke="rgba(231, 51, 36, 0.3)" stroke-width="1.5"/>
+
+  <!-- Browser Titlebar -->
+  <path d="M 36 42 Q 36 30 48 30 L 752 30 Q 764 30 764 42 L 764 68 L 36 68 Z" fill="#080c16"/>
+  <circle cx="56" cy="49" r="4.5" fill="#EF4444"/>
+  <circle cx="70" cy="49" r="4.5" fill="#F59E0B"/>
+  <circle cx="84" cy="49" r="4.5" fill="#10B981"/>
+
+  <!-- Browser URL Pill -->
+  <rect x="230" y="38" width="340" height="22" rx="6" fill="#141c2e" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="400" y="53" fill="#94A3B8" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" text-anchor="middle">
+    🔒 https://riskhub.tech
+  </text>
+
+  <!-- Left Column: Hero Content -->
+  <g transform="translate(64, 94)">
+    <!-- Security Badge -->
+    <rect x="0" y="0" width="220" height="24" rx="12" fill="rgba(231,51,36,0.15)" stroke="rgba(231,51,36,0.5)" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#E73324"/>
+    <text x="24" y="16" fill="#FF8A80" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.5">
+      CIBERSEGURIDAD &amp; PENTESTING
+    </text>
+
+    <!-- Main Branding Title -->
+    <text x="0" y="58" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900" letter-spacing="-0.5">
+      RiskHub <tspan fill="#E73324">Tech</tspan>
+    </text>
+    <text x="0" y="86" fill="#F1F5F9" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600">
+      Tu Seguridad Digital, Nuestra Prioridad
+    </text>
+
+    <!-- Subtitle description -->
+    <text x="0" y="116" fill="#94A3B8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" line-height="1.5">
+      <tspan x="0" dy="0">Protege activos críticos en Bolivia &amp; LATAM con</tspan>
+      <tspan x="0" dy="16">evaluaciones Red Team, pentesting web y auditorías</tspan>
+      <tspan x="0" dy="16">normativas de continuidad y gestión de riesgos.</tspan>
+    </text>
+
+    <!-- Feature Tags -->
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="86" height="22" rx="6" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+      <text x="43" y="15" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" text-anchor="middle">⚡ Red Team</text>
+
+      <rect x="94" y="0" width="102" height="22" rx="6" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+      <text x="145" y="15" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" text-anchor="middle">🔍 Pentesting</text>
+
+      <rect x="204" y="0" width="94" height="22" rx="6" fill="#1e293b" stroke="rgba(255,255,255,0.08)"/>
+      <text x="251" y="15" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" text-anchor="middle">📋 ISO 27001</text>
+    </g>
+
+    <!-- CTA Button Mockup -->
+    <g transform="translate(0, 212)">
+      <rect x="0" y="0" width="168" height="36" rx="10" fill="url(#crimsonGrad)" filter="url(#softGlow)"/>
+      <text x="84" y="23" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" text-anchor="middle">
+        Explorar Soluciones ➔
+      </text>
+
+      <rect x="180" y="0" width="124" height="36" rx="10" fill="#141c2e" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+      <text x="242" y="23" fill="#94A3B8" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+        CVSS 4.0 Info
+      </text>
+    </g>
+
+    <!-- Mini stats footer -->
+    <g transform="translate(0, 280)">
+      <text x="0" y="0" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+        [LIVE] React + TypeScript + Tailwind CSS
+      </text>
+      <text x="0" y="16" fill="#64748B" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">
+        Optimización SEO • JSON-LD • OpenGraph • 100% Responsivo
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Column: Interactive Security Dashboard Card -->
+  <g transform="translate(420, 94)">
+    <!-- Dashboard Card Container -->
+    <rect x="0" y="0" width="316" height="336" rx="12" fill="url(#cardGrad)" stroke="rgba(231,51,36,0.3)" stroke-width="1.5" filter="url(#softGlow)"/>
+
+    <!-- Dashboard Header -->
+    <rect x="0" y="0" width="316" height="42" rx="12" fill="#0f172a"/>
+    <path d="M 0 30 L 316 30 L 316 42 L 0 42 Z" fill="#0f172a"/>
+    <text x="16" y="26" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">
+      Panel de Ciberseguridad &amp; Diagnóstico
+    </text>
+    <circle cx="296" cy="21" r="4" fill="#22C55E"/>
+
+    <!-- Shield Icon & Threat Status -->
+    <g transform="translate(16, 56)">
+      <rect x="0" y="0" width="284" height="58" rx="8" fill="#1a253d" stroke="rgba(34,197,94,0.3)" stroke-width="1"/>
+      <!-- Shield SVG Graphic -->
+      <path d="M 28 15 L 42 10 L 56 15 C 56 28 42 38 42 42 C 42 38 28 28 28 15 Z" fill="#22C55E" opacity="0.2" stroke="#22C55E" stroke-width="2"/>
+      <path d="M 37 26 L 41 30 L 48 21" stroke="#22C55E" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+      <text x="68" y="27" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700">
+        Nivel de Riesgo Mitigado
+      </text>
+      <text x="68" y="44" fill="#22C55E" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+        99.8% INFRAESTRUCTURA SEGURA
+      </text>
+    </g>
+
+    <!-- Two Metric Blocks -->
+    <g transform="translate(16, 126)">
+      <!-- Metric 1 -->
+      <rect x="0" y="0" width="136" height="66" rx="8" fill="#0f172a" stroke="rgba(255,255,255,0.06)"/>
+      <text x="14" y="24" fill="#94A3B8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">Metodología</text>
+      <text x="14" y="48" fill="#E73324" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">CVSS 4.0</text>
+
+      <!-- Metric 2 -->
+      <rect x="148" y="0" width="136" height="66" rx="8" fill="#0f172a" stroke="rgba(255,255,255,0.06)"/>
+      <text x="162" y="24" fill="#94A3B8" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">Estándar</text>
+      <text x="162" y="48" fill="#38BDF8" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="800">ISO 27001</text>
+    </g>
+
+    <!-- Terminal Output Log -->
+    <g transform="translate(16, 204)">
+      <rect x="0" y="0" width="284" height="114" rx="8" fill="#080c14" stroke="rgba(255,255,255,0.08)"/>
+      <rect x="0" y="0" width="284" height="20" rx="8" fill="#141c2e"/>
+      <path d="M 0 12 L 284 12 L 284 20 L 0 20 Z" fill="#141c2e"/>
+      <text x="12" y="14" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9">terminal://riskhub-audit-v4.sh</text>
+
+      <text x="12" y="38" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10">
+        &gt; audit --target client-perimeter
+      </text>
+      <text x="12" y="55" fill="#22C55E" font-family="'JetBrains Mono', monospace" font-size="10">
+        ✓ OWASP Top 10: 0 Critical Alerts
+      </text>
+      <text x="12" y="72" fill="#E2E8F0" font-family="'JetBrains Mono', monospace" font-size="10">
+        ✓ OSINT Discovery: Sanitized
+      </text>
+      <text x="12" y="89" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="10">
+        ! BCP &amp; DRP Protocol Verified
+      </text>
+      <text x="12" y="105" fill="#E73324" font-family="'JetBrains Mono', monospace" font-size="10">
+        [STATUS] Security Shield Active
+      </text>
+    </g>
+  </g>
+</svg>
