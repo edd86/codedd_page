@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="invBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a100a"/>
+      <stop offset="50%" stop-color="#121812"/>
+      <stop offset="100%" stop-color="#080c08"/>
+    </linearGradient>
+
+    <!-- Gold Gradients -->
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7B38"/>
+    </linearGradient>
+
+    <!-- Olive Accent -->
+    <linearGradient id="oliveGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#65882B"/>
+      <stop offset="100%" stop-color="#4B5E28"/>
+    </linearGradient>
+
+    <filter id="softGlow2" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="16" fill="url(#invBg2)"/>
+  <rect width="798" height="498" x="1" y="1" rx="15" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(48, 32)">
+    <rect x="0" y="0" width="170" height="22" rx="11" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+    <text x="85" y="15" fill="#FDE047" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">
+      PROGRAMA &amp; ITINERARIO
+    </text>
+
+    <text x="0" y="54" fill="#FFFFFF" font-family="'Georgia', serif" font-size="24" font-weight="bold">
+      Itinerario Protocolar &amp; Geolocalización Interactiva
+    </text>
+    <text x="0" y="74" fill="#A8A29E" font-family="'Segoe UI', Roboto, sans-serif" font-size="12">
+      Módulos interactivos diseñados para guiar a los invitados en cada fase del evento con mapas y enlaces directos.
+    </text>
+  </g>
+
+  <!-- Two Main Event Cards (Locations 1 & 2) -->
+  <g transform="translate(48, 126)">
+    <!-- Event Card 1: Acto Académico -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="342" height="236" rx="14" fill="#151e15" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" filter="url(#softGlow2)"/>
+
+      <!-- Header Bar Olive -->
+      <path d="M 0 14 Q 0 0 14 0 L 328 0 Q 342 0 342 14 L 342 42 L 0 42 Z" fill="url(#oliveGrad2)"/>
+      <text x="18" y="26" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" letter-spacing="0.5">
+        🎓 UBICACIÓN 1 · CEREMONIA
+      </text>
+      <text x="324" y="26" fill="#FDE047" font-family="'Courier New', monospace" font-size="13" font-weight="bold" text-anchor="end">
+        14:30 PM
+      </text>
+
+      <!-- Card Body -->
+      <text x="18" y="70" fill="#FFFFFF" font-family="'Georgia', serif" font-size="16" font-weight="bold">
+        Acto de Titulación &amp; Juramento
+      </text>
+      <text x="18" y="90" fill="#D4AF37" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">
+        📍 Auditorio de la Carrera de Idiomas
+      </text>
+      <text x="18" y="108" fill="#A8A29E" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">
+        Facultad de Humanidades · Calle Nicolás Ortíz #182
+      </text>
+
+      <!-- Map Mockup Box -->
+      <g transform="translate(18, 122)">
+        <rect x="0" y="0" width="306" height="66" rx="8" fill="#1f291f" stroke="rgba(212,175,55,0.2)"/>
+        <!-- Map Grid lines -->
+        <line x1="0" y1="22" x2="306" y2="22" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="0" y1="44" x2="306" y2="44" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="80" y1="0" x2="80" y2="66" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="180" y1="0" x2="180" y2="66" stroke="rgba(255,255,255,0.06)"/>
+        <!-- Road path -->
+        <path d="M 20 50 L 90 30 L 170 35 L 240 15 L 290 20" stroke="#556B2F" stroke-width="4" fill="none" opacity="0.6"/>
+        <circle cx="170" cy="35" r="7" fill="#EF4444" stroke="#FFFFFF" stroke-width="1.5"/>
+        <text x="184" y="39" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">
+          Auditorio Idiomas
+        </text>
+      </g>
+
+      <!-- Direct Maps Button -->
+      <rect x="18" y="196" width="306" height="28" rx="6" fill="#1b241b" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+      <text x="171" y="214" fill="#FDE047" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+        🗺 Ver en Google Maps ↗
+      </text>
+    </g>
+
+    <!-- Event Card 2: Cena & Brindis -->
+    <g transform="translate(362, 0)">
+      <rect x="0" y="0" width="342" height="236" rx="14" fill="#151e15" stroke="rgba(212,175,55,0.4)" stroke-width="1.5" filter="url(#softGlow2)"/>
+
+      <!-- Header Bar Gold -->
+      <path d="M 0 14 Q 0 0 14 0 L 328 0 Q 342 0 342 14 L 342 42 L 0 42 Z" fill="url(#goldGrad2)"/>
+      <text x="18" y="26" fill="#1C1917" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" letter-spacing="0.5">
+        🥂 UBICACIÓN 2 · RECEPCIÓN
+      </text>
+      <text x="324" y="26" fill="#1C1917" font-family="'Courier New', monospace" font-size="13" font-weight="bold" text-anchor="end">
+        19:30 PM
+      </text>
+
+      <!-- Card Body -->
+      <text x="18" y="70" fill="#FFFFFF" font-family="'Georgia', serif" font-size="16" font-weight="bold">
+        Cena &amp; Brindis de Honor
+      </text>
+      <text x="18" y="90" fill="#FDE047" font-family="'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="600">
+        📍 Salón de Eventos Los Lirios #5
+      </text>
+      <text x="18" y="108" fill="#A8A29E" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5">
+        Recepción de gala y brindis de honor familiar
+      </text>
+
+      <!-- Map Mockup Box -->
+      <g transform="translate(18, 122)">
+        <rect x="0" y="0" width="306" height="66" rx="8" fill="#1f291f" stroke="rgba(212,175,55,0.2)"/>
+        <!-- Map Grid lines -->
+        <line x1="0" y1="22" x2="306" y2="22" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="0" y1="44" x2="306" y2="44" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="110" y1="0" x2="110" y2="66" stroke="rgba(255,255,255,0.06)"/>
+        <line x1="210" y1="0" x2="210" y2="66" stroke="rgba(255,255,255,0.06)"/>
+        <!-- Road path -->
+        <path d="M 10 20 L 70 45 L 150 40 L 230 50 L 290 30" stroke="#D4AF37" stroke-width="4" fill="none" opacity="0.6"/>
+        <circle cx="230" cy="50" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="1.5"/>
+        <text x="244" y="44" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="700">
+          Los Lirios #5
+        </text>
+      </g>
+
+      <!-- Direct Maps Button -->
+      <rect x="18" y="196" width="306" height="28" rx="6" fill="#1b241b" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+      <text x="171" y="214" fill="#FDE047" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">
+        🗺 Ver en Google Maps ↗
+      </text>
+    </g>
+  </g>
+
+  <!-- Bottom Quote & Tech Highlights Strip -->
+  <g transform="translate(48, 386)">
+    <rect x="0" y="0" width="704" height="74" rx="12" fill="#111811" stroke="rgba(212,175,55,0.2)" stroke-width="1"/>
+
+    <!-- Quotation mark flourish -->
+    <text x="24" y="42" fill="rgba(212,175,55,0.4)" font-family="'Georgia', serif" font-size="36" font-style="italic">“</text>
+
+    <text x="50" y="32" fill="#E7E5E4" font-family="'Georgia', serif" font-size="13" font-style="italic">
+      “Aprender un idioma es tener una ventana más desde la cual contemplar el mundo.”
+    </text>
+    <text x="50" y="52" fill="#D4AF37" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600">
+      ✦ Micro-animaciones IntersectionObserver • Cero Dependencias • Despliegue Inmediato Vercel
+    </text>
+
+    <!-- Mobile-First Badge -->
+    <rect x="560" y="20" width="124" height="34" rx="8" fill="#556B2F"/>
+    <text x="622" y="41" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle">
+      📱 Mobile-First
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="invBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c120c"/>
+      <stop offset="50%" stop-color="#141c14"/>
+      <stop offset="100%" stop-color="#090e09"/>
+    </linearGradient>
+
+    <!-- Olive & Gold Gradients -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="40%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7B38"/>
+    </linearGradient>
+
+    <linearGradient id="oliveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6B8E23"/>
+      <stop offset="100%" stop-color="#556B2F"/>
+    </linearGradient>
+
+    <!-- Card Ivory Background -->
+    <linearGradient id="ivoryCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCFAF5"/>
+      <stop offset="100%" stop-color="#F4EEE1"/>
+    </linearGradient>
+
+    <!-- Soft Glow Filter -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="500" rx="16" fill="url(#invBg)"/>
+  <rect width="798" height="498" x="1" y="1" rx="15" fill="none" stroke="rgba(212,175,55,0.25)" stroke-width="1"/>
+
+  <!-- Ambient Golden & Olive Lighting Orbs -->
+  <circle cx="160" cy="110" r="100" fill="#D4AF37" opacity="0.12" filter="url(#goldGlow)"/>
+  <circle cx="680" cy="390" r="130" fill="#556B2F" opacity="0.16" filter="url(#goldGlow)"/>
+
+  <!-- Decorative Stars / Flourishes -->
+  <g fill="#D4AF37" opacity="0.4">
+    <circle cx="80" cy="80" r="1.5"/>
+    <circle cx="120" cy="420" r="1.5"/>
+    <circle cx="720" cy="100" r="1.5"/>
+    <text x="390" y="45" font-family="'Times New Roman', serif" font-size="16" text-anchor="middle">✦ ✧ ✦</text>
+  </g>
+
+  <!-- Left Side: Interactive Mobile Device Mockup -->
+  <g transform="translate(68, 50)" filter="url(#cardShadow)">
+    <!-- Phone Outer Case -->
+    <rect x="0" y="0" width="220" height="400" rx="28" fill="#18181b" stroke="url(#goldGrad)" stroke-width="2"/>
+    <!-- Speaker & Camera notch -->
+    <rect x="75" y="10" width="70" height="12" rx="6" fill="#09090b"/>
+    <circle cx="130" cy="16" r="2.5" fill="#27272a"/>
+
+    <!-- Screen Content: Ivory Invitation View -->
+    <rect x="8" y="28" width="204" height="358" rx="20" fill="url(#ivoryCard)"/>
+
+    <!-- Inner Golden Frame -->
+    <rect x="14" y="34" width="192" height="346" rx="16" fill="none" stroke="#D4AF37" stroke-width="1" stroke-dasharray="3,2" opacity="0.6"/>
+
+    <!-- Academic Emblem / Monogram -->
+    <g transform="translate(110, 68)">
+      <circle cx="0" cy="0" r="20" fill="#556B2F" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="0" cy="0" r="17" fill="none" stroke="#FDE047" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <text x="0" y="5" fill="#FCFAF5" font-family="'Georgia', serif" font-size="12" font-weight="bold" text-anchor="middle">🎓</text>
+    </g>
+
+    <!-- Invitation Heading -->
+    <text x="110" y="104" fill="#9A7B38" font-family="'Georgia', serif" font-size="8.5" font-weight="bold" text-anchor="middle" letter-spacing="1">
+      INVITACIÓN SOLEMNE
+    </text>
+    <text x="110" y="116" fill="#556B2F" font-family="'Georgia', serif" font-size="7.5" text-anchor="middle">
+      Licenciatura en Idiomas
+    </text>
+
+    <!-- Portrait Mockup -->
+    <g transform="translate(70, 126)">
+      <rect x="0" y="0" width="80" height="96" rx="8" fill="#E2E8F0" stroke="#D4AF37" stroke-width="1.5"/>
+      <circle cx="40" cy="40" r="22" fill="#CBD5E1"/>
+      <path d="M 22 78 C 22 62 58 62 58 78 Z" fill="#64748B"/>
+      <!-- Graduation cap silhouette -->
+      <polygon points="40,16 60,24 40,32 20,24" fill="#556B2F"/>
+      <rect x="58" y="24" width="2" height="12" fill="#D4AF37"/>
+    </g>
+
+    <!-- Graduate Name -->
+    <text x="110" y="238" fill="#1c1917" font-family="'Georgia', serif" font-size="10.5" font-weight="bold" text-anchor="middle">
+      Lic. Elisama July Diaz
+    </text>
+
+    <!-- Mini Countdown in Phone -->
+    <g transform="translate(24, 252)">
+      <rect x="0" y="0" width="172" height="42" rx="6" fill="#F4EEE1" stroke="#D4AF37" stroke-width="1"/>
+      <!-- 4 mini boxes -->
+      <g transform="translate(10, 6)" font-family="'Courier New', monospace" text-anchor="middle">
+        <text x="15" y="18" fill="#556B2F" font-size="14" font-weight="bold">05</text>
+        <text x="15" y="28" fill="#78716c" font-size="6.5">DÍAS</text>
+
+        <text x="53" y="18" fill="#556B2F" font-size="14" font-weight="bold">14</text>
+        <text x="53" y="28" fill="#78716c" font-size="6.5">HORAS</text>
+
+        <text x="91" y="18" fill="#556B2F" font-size="14" font-weight="bold">32</text>
+        <text x="91" y="28" fill="#78716c" font-size="6.5">MIN</text>
+
+        <text x="129" y="18" fill="#556B2F" font-size="14" font-weight="bold">18</text>
+        <text x="129" y="28" fill="#78716c" font-size="6.5">SEG</text>
+      </g>
+    </g>
+
+    <!-- Event Date Badge -->
+    <rect x="36" y="304" width="148" height="20" rx="4" fill="#556B2F"/>
+    <text x="110" y="318" fill="#FFFFFF" font-family="'Georgia', serif" font-size="8.5" font-weight="bold" text-anchor="middle">
+      ✦ Viernes, 16 de Octubre ✦
+    </text>
+
+    <!-- View location button -->
+    <rect x="42" y="332" width="136" height="20" rx="4" fill="none" stroke="#9A7B38" stroke-width="1"/>
+    <text x="110" y="345" fill="#78350F" font-family="'Georgia', serif" font-size="8" font-weight="600" text-anchor="middle">
+      📍 Ver Itinerario &amp; Mapa
+    </text>
+  </g>
+
+  <!-- Right Side: Platform Highlights & Real-time Countdown Banner -->
+  <g transform="translate(320, 60)">
+    <!-- Pill Tag -->
+    <rect x="0" y="0" width="230" height="26" rx="13" fill="rgba(212,175,55,0.15)" stroke="rgba(212,175,55,0.4)" stroke-width="1"/>
+    <text x="115" y="17" fill="#FDE047" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.5">
+      💌 INVITACIONES VIRTUALES INTERACTIVAS
+    </text>
+
+    <!-- Title -->
+    <text x="0" y="60" fill="#FFFFFF" font-family="'Georgia', serif" font-size="28" font-weight="bold">
+      Diseño Elegante &amp; Solemne
+    </text>
+    <text x="0" y="86" fill="#D4AF37" font-family="'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="600">
+      Experiencia Digital Personalizada para Eventos &amp; Galas
+    </text>
+
+    <!-- Description -->
+    <text x="0" y="116" fill="#D6D3D1" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" line-height="1.5">
+      <tspan x="0" dy="0">Plataforma web de invitaciones interactivas desarrollada con</tspan>
+      <tspan x="0" dy="18">estilo clásico editorial, temporizador en tiempo real,</tspan>
+      <tspan x="0" dy="18">animaciones fluidas de desplazamiento y mapas integrados.</tspan>
+    </text>
+
+    <!-- Real-time Countdown Showcase Box -->
+    <g transform="translate(0, 168)">
+      <rect x="0" y="0" width="420" height="106" rx="12" fill="#141c14" stroke="url(#goldGrad)" stroke-width="1.5" filter="url(#goldGlow)"/>
+
+      <text x="20" y="26" fill="#D4AF37" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">
+        ⏳ TEMPORIZADOR SOLEMNE EN TIEMPO REAL
+      </text>
+
+      <!-- 4 Live Timer Digit Blocks -->
+      <g transform="translate(20, 38)">
+        <!-- Days -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="85" height="52" rx="8" fill="#1e281e" stroke="rgba(212,175,55,0.3)"/>
+          <text x="42" y="33" fill="#FDE047" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle">05</text>
+          <text x="42" y="46" fill="#A8A29E" font-family="'Segoe UI', sans-serif" font-size="8" font-weight="700" text-anchor="middle">DÍAS</text>
+        </g>
+        <!-- Hours -->
+        <g transform="translate(98, 0)">
+          <rect x="0" y="0" width="85" height="52" rx="8" fill="#1e281e" stroke="rgba(212,175,55,0.3)"/>
+          <text x="42" y="33" fill="#FDE047" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle">14</text>
+          <text x="42" y="46" fill="#A8A29E" font-family="'Segoe UI', sans-serif" font-size="8" font-weight="700" text-anchor="middle">HORAS</text>
+        </g>
+        <!-- Minutes -->
+        <g transform="translate(196, 0)">
+          <rect x="0" y="0" width="85" height="52" rx="8" fill="#1e281e" stroke="rgba(212,175,55,0.3)"/>
+          <text x="42" y="33" fill="#FDE047" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle">32</text>
+          <text x="42" y="46" fill="#A8A29E" font-family="'Segoe UI', sans-serif" font-size="8" font-weight="700" text-anchor="middle">MINUTOS</text>
+        </g>
+        <!-- Seconds -->
+        <g transform="translate(294, 0)">
+          <rect x="0" y="0" width="85" height="52" rx="8" fill="#1e281e" stroke="rgba(212,175,55,0.3)"/>
+          <text x="42" y="33" fill="#6EE7B7" font-family="'Courier New', monospace" font-size="24" font-weight="bold" text-anchor="middle">18</text>
+          <text x="42" y="46" fill="#A8A29E" font-family="'Segoe UI', sans-serif" font-size="8" font-weight="700" text-anchor="middle">SEGUNDOS</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Key Feature Badges -->
+    <g transform="translate(0, 292)">
+      <rect x="0" y="0" width="124" height="28" rx="6" fill="#1c241c" stroke="rgba(255,255,255,0.08)"/>
+      <text x="62" y="18" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">✨ Vanilla CSS &amp; JS</text>
+
+      <rect x="134" y="0" width="140" height="28" rx="6" fill="#1c241c" stroke="rgba(255,255,255,0.08)"/>
+      <text x="204" y="18" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">🗺️ Google Maps Live</text>
+
+      <rect x="284" y="0" width="136" height="28" rx="6" fill="#1c241c" stroke="rgba(255,255,255,0.08)"/>
+      <text x="352" y="18" fill="#E2E8F0" font-family="'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">🚀 Vercel Deployed</text>
+    </g>
+
+    <!-- Live Demo Link Badge -->
+    <g transform="translate(0, 334)">
+      <rect x="0" y="0" width="420" height="40" rx="10" fill="url(#oliveGrad)" stroke="#D4AF37" stroke-width="1"/>
+      <text x="210" y="25" fill="#FFFFFF" font-family="'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="bold" text-anchor="middle">
+        🌐 invitacion-sigma-eight.vercel.app ➔
+      </text>
+    </g>
+  </g>
+</svg>

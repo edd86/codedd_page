@@ -76,6 +76,32 @@ export const projects: Project[] = [
     ]
   },
   {
+    id: "invitaciones-virtuales",
+    title: "Invitaciones Virtuales Solemnes & Personalizadas",
+    role: "Desarrollador Frontend & Diseñador Web",
+    period: "Octubre 2024",
+    location: "Sucre, Bolivia",
+    companyOrClient: "Freelance / Eventos",
+    description: "Aplicación web de invitaciones solemnes interactivas con temporizador protocolar en tiempo real, itinerario y mapas.",
+    fullDescription: "Diseño y desarrollo frontend de una experiencia web de invitaciones virtuales personalizadas para eventos de alta distinción (titulaciones, bodas y galas). Desarrollada con HTML5 semántico, CSS3 moderno (arquitectura de variables, animaciones fluidas con IntersectionObserver, efectos dorados y diseño mobile-first) y JavaScript modular. Integra un temporizador protocolar en tiempo real con micro-animaciones, itinerario protocolar con ubicación satelital mediante Google Maps interactivo, tarjetas de gratitud y soporte para formatos de imagen de última generación (AVIF y WebP).",
+    category: "web",
+    tags: ["JavaScript", "CSS3", "HTML5", "Vercel", "UI/UX", "Mobile First", "Google Maps", "Animaciones"],
+    demoUrl: "https://invitacion-sigma-eight.vercel.app/",
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/invitacion_1.svg",
+        alt: "Invitación Virtual Solemne & Temporizador",
+        caption: "Diseño editorial elegante con temporizador dinámico en tiempo real y vista móvil"
+      },
+      {
+        url: "/images/projects/invitacion_2.svg",
+        alt: "Itinerario Protocolar y Mapas",
+        caption: "Itinerario del evento con geolocalización interactiva en Google Maps y tarjeta de gratitud"
+      }
+    ]
+  },
+  {
     id: "financial-project",
     title: "App Flutter de Gestión Contable",
     role: "Desarrollador Móvil",
