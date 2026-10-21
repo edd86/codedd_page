@@ -52,7 +52,7 @@ export const projects: Project[] = [
     id: "meow-meow-pos",
     title: "Meow Meow – Sistema POS & Gestión Kawaii Boutique",
     role: "Desarrollador Full Stack & Frontend",
-    period: "Octubre 2026 – Presente",
+    period: "Octubre 2024 – Presente",
     location: "Sucre, Bolivia",
     companyOrClient: "Meow Meow Boutique",
     description: "Sistema web de Punto de Venta (POS) y panel administrativo para boutique y papelería kawaii con métricas y stock en tiempo real.",
