@@ -47,11 +47,13 @@ export const profileData: ProfileData = {
     {
       category: "Frontend & Web",
       items: [
+        { name: "Next.js" },
+        { name: "React" },
         { name: "Astro" },
         { name: "TypeScript" },
         { name: "JavaScript" },
-        { name: "HTML5 & CSS3" },
         { name: "Tailwind CSS" },
+        { name: "HTML5 & CSS3" },
         { name: "XAML" },
       ],
     },

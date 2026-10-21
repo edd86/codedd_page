@@ -85,20 +85,32 @@
     </div>
 
     <!-- Modal Footer Actions -->
-    <div class="flex items-center justify-between px-6 py-4 border-t border-white/10 bg-[#1c1b1b]">
-      <a
-        id="modal-repo-link"
-        href="#"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium border border-white/10 transition-colors"
-      >
-        <span>📁 Ver Repositorio en GitHub</span>
-      </a>
+    <div class="flex flex-wrap items-center justify-between gap-3 px-6 py-4 border-t border-white/10 bg-[#1c1b1b]">
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          id="modal-demo-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-semibold shadow-glow-primary hover:opacity-90 transition-all"
+        >
+          <span>🌐 Probar Demo en Vivo</span>
+        </a>
+
+        <a
+          id="modal-repo-link"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-medium border border-white/10 transition-colors"
+        >
+          <span>📁 Ver Repositorio en GitHub</span>
+        </a>
+      </div>
 
       <button
         id="close-modal-bottom-btn"
-        class="px-4 py-2 rounded-xl bg-primary text-white text-sm font-semibold hover:bg-primary-dark transition-colors"
+        class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-sm font-semibold transition-colors"
       >
         Cerrar
       </button>
@@ -125,6 +137,7 @@
     const modalDesc = document.getElementById("modal-description");
     const modalTags = document.getElementById("modal-tags");
     const modalRepoLink = document.getElementById("modal-repo-link") as HTMLAnchorElement;
+    const modalDemoLink = document.getElementById("modal-demo-link") as HTMLAnchorElement;
 
     function openModal(projectId: string) {
       const project = projects.find((p) => p.id === projectId);
@@ -136,6 +149,16 @@
       if (modalPeriod) modalPeriod.textContent = project.period;
       if (modalLocation) modalLocation.textContent = `${project.location} ${project.companyOrClient ? `(${project.companyOrClient})` : ''}`;
       if (modalDesc) modalDesc.textContent = project.fullDescription || project.description;
+
+      // Demo link
+      if (modalDemoLink) {
+        if (project.demoUrl) {
+          modalDemoLink.href = project.demoUrl;
+          modalDemoLink.style.display = "inline-flex";
+        } else {
+          modalDemoLink.style.display = "none";
+        }
+      }
 
       // Repository link
       if (modalRepoLink) {

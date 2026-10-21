@@ -23,6 +23,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "meow-meow-pos",
+    title: "Meow Meow – Sistema POS & Gestión Kawaii Boutique",
+    role: "Desarrollador Full Stack & Frontend",
+    period: "Octubre 2026 – Presente",
+    location: "Sucre, Bolivia",
+    companyOrClient: "Meow Meow Boutique",
+    description: "Sistema web de Punto de Venta (POS) y panel administrativo para boutique y papelería kawaii con métricas y stock en tiempo real.",
+    fullDescription: "Plataforma web integral diseñada para la venta minorista y control operativo de tiendas kawaii. Integra un terminal de Punto de Venta (POS) de alta velocidad con lectura de códigos de barras, atajos de teclado (F2, F4, F9) y compatibilidad táctil; módulo de cobros multidivisa (efectivo, tarjeta, QR) y tickets con descuentos por cupón; control de inventario en tiempo real con semáforos de stock crítico; arqueo de caja diario y un dashboard con analíticas de ingresos semanales y ranking de productos.",
+    category: "web",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "POS", "Vercel", "Dashboard", "E-commerce"],
+    repository: "https://github.com/edd86/web_meow_meow.git",
+    demoUrl: "https://web-meow-meow-86pt.vercel.app/",
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/meow_meow_1.svg",
+        alt: "Terminal POS Meow Meow",
+        caption: "Terminal Punto de Venta (POS) interactivo con carrito, cupones y atajos rápidos"
+      },
+      {
+        url: "/images/projects/meow_meow_2.svg",
+        alt: "Dashboard Administrativo Meow Meow",
+        caption: "Panel de control principal con métricas de ventas, arqueo de caja y stock en vivo"
+      }
+    ]
+  },
+  {
     id: "financial-project",
     title: "App Flutter de Gestión Contable",
     role: "Desarrollador Móvil",

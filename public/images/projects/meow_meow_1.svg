@@ -1,0 +1,290 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff5f7"/>
+      <stop offset="100%" stop-color="#fed7e2"/>
+    </linearGradient>
+    <linearGradient id="sakuraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff758c"/>
+      <stop offset="100%" stop-color="#ff7eb3"/>
+    </linearGradient>
+    <linearGradient id="berryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#ff85a2" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="500" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Left Sidebar (Mini navigation) -->
+  <rect x="0" y="0" width="160" height="500" rx="16" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <rect x="159" y="0" width="1" height="500" fill="#fecdd3"/>
+
+  <!-- Brand Logo -->
+  <rect x="16" y="16" width="36" height="36" rx="10" fill="#ffe4e6" stroke="#f43f5e" stroke-width="1"/>
+  <text x="34" y="40" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" text-anchor="middle">🐱</text>
+  <text x="60" y="32" font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="14" fill="#9f1239">Meow Meow</text>
+  <text x="60" y="46" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#fb7185">POS Kawaii ✨</text>
+
+  <!-- Sidebar Nav items -->
+  <g transform="translate(12, 70)">
+    <!-- Dashboard -->
+    <rect x="0" y="0" width="136" height="30" rx="15" fill="transparent"/>
+    <text x="14" y="20" font-size="12">🌸</text>
+    <text x="36" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#71717a">Dashboard</text>
+
+    <!-- POS (Active) -->
+    <rect x="0" y="36" width="136" height="32" rx="16" fill="url(#sakuraGrad)" filter="url(#cardShadow)"/>
+    <text x="14" y="57" font-size="13">🛍️</text>
+    <text x="36" y="57" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">Punto de Venta</text>
+
+    <!-- Inventario -->
+    <rect x="0" y="74" width="136" height="30" rx="15" fill="transparent"/>
+    <text x="14" y="94" font-size="12">📦</text>
+    <text x="36" y="94" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#71717a">Inventario</text>
+
+    <!-- Compras -->
+    <rect x="0" y="108" width="136" height="30" rx="15" fill="transparent"/>
+    <text x="14" y="128" font-size="12">🚚</text>
+    <text x="36" y="128" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#71717a">Compras</text>
+
+    <!-- Reportes -->
+    <rect x="0" y="142" width="136" height="30" rx="15" fill="transparent"/>
+    <text x="14" y="162" font-size="12">📊</text>
+    <text x="36" y="162" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#71717a">Reportes</text>
+  </g>
+
+  <!-- Store status badge in sidebar bottom -->
+  <rect x="14" y="440" width="132" height="42" rx="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1"/>
+  <circle cx="28" cy="461" r="4" fill="#10b981"/>
+  <text x="38" y="464" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="bold" fill="#9f1239">Tienda Abierta 💕</text>
+
+  <!-- Top Header bar -->
+  <rect x="160" y="0" width="640" height="50" fill="#ffffff" opacity="0.9" stroke="#fecdd3" stroke-width="0.5"/>
+  <text x="180" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="13" fill="#881337">¡Buen día, Administradora! ✨</text>
+  <text x="180" y="40" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" fill="#94a3b8">Turno Mañana • Meow Central Store</text>
+
+  <!-- Header Right Profile -->
+  <rect x="710" y="10" width="76" height="30" rx="15" fill="#fce7f3" stroke="#fbcfe8" stroke-width="1"/>
+  <circle cx="725" cy="25" r="9" fill="#f472b6"/>
+  <text x="725" y="29" font-size="11" text-anchor="middle">🐱</text>
+  <text x="740" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#831843">Sakura</text>
+
+  <!-- MAIN CATALOG AREA (Center, cols: 175 to 555) -->
+  <!-- Search input -->
+  <rect x="175" y="62" width="260" height="28" rx="14" fill="#ffffff" stroke="#fecdd3" stroke-width="1.2"/>
+  <text x="190" y="80" font-size="11">🔍</text>
+  <text x="210" y="80" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" fill="#9ca3af">Buscar SKU o producto... (F2)</text>
+  <rect x="405" y="67" width="22" height="18" rx="4" fill="#ffe4e6"/>
+  <text x="416" y="79" font-family="monospace" font-size="8" font-weight="bold" fill="#e11d48" text-anchor="middle">F2</text>
+
+  <!-- Category Pills -->
+  <rect x="175" y="98" width="60" height="22" rx="11" fill="url(#berryGrad)"/>
+  <text x="205" y="113" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#ffffff" text-anchor="middle">✨ Todos (48)</text>
+
+  <rect x="240" y="98" width="64" height="22" rx="11" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="272" y="113" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#9f1239" text-anchor="middle">🧸 Peluches</text>
+
+  <rect x="308" y="98" width="66" height="22" rx="11" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="341" y="113" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#9f1239" text-anchor="middle">🎀 Papelería</text>
+
+  <rect x="378" y="98" width="68" height="22" rx="11" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="412" y="113" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#9f1239" text-anchor="middle">🍵 Tazas &amp; Termos</text>
+
+  <rect x="450" y="98" width="62" height="22" rx="11" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="481" y="113" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#9f1239" text-anchor="middle">🌸 Accesorios</text>
+
+  <!-- PRODUCT CARDS GRID (6 Cards: 2 rows x 3 cols) -->
+  <!-- Product 1 -->
+  <g transform="translate(175, 130)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">🐼</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#dcfce7"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#15803d" text-anchor="middle">Stock: 15</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Peluche Panda</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">Felpa boba 25cm</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$18.50</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 2 -->
+  <g transform="translate(295, 130)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">📒</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#dcfce7"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#15803d" text-anchor="middle">Stock: 42</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Libreta Pastel</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">120h punteadas</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$8.00</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 3 -->
+  <g transform="translate(415, 130)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">🖍️</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#fef9c3"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#a16207" text-anchor="middle">Stock: 9</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Set Marcadores</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">6 tintas pastel</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$12.00</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 4 -->
+  <g transform="translate(175, 290)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">💖</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#dcfce7"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#15803d" text-anchor="middle">Stock: 30</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Llavero Corazón</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">Resina glitter</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$4.50</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 5 -->
+  <g transform="translate(295, 290)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">🐱</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#fee2e2"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#b91c1c" text-anchor="middle">⚠️ Stock: 5</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Termo Orejitas</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">Acero inox 500ml</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$22.00</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Product 6 -->
+  <g transform="translate(415, 290)">
+    <rect width="112" height="150" rx="12" fill="#ffffff" stroke="#ffe4e6" stroke-width="1.2" filter="url(#cardShadow)"/>
+    <rect x="6" y="6" width="100" height="66" rx="8" fill="#fff1f2"/>
+    <text x="56" y="50" font-size="34" text-anchor="middle">✨</text>
+    <rect x="10" y="10" width="46" height="13" rx="6" fill="#dcfce7"/>
+    <text x="33" y="20" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" font-weight="bold" fill="#15803d" text-anchor="middle">Stock: 88</text>
+    <text x="10" y="86" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="bold" fill="#4c0519">Stickers Holo</text>
+    <text x="10" y="98" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">50 vinil kawaii</text>
+    <text x="10" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="900" fill="#e11d48">$3.50</text>
+    <circle cx="94" cy="130" r="11" fill="url(#sakuraGrad)"/>
+    <text x="94" y="134" font-family="'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">+</text>
+  </g>
+
+  <!-- Bottom shortcut helper bar -->
+  <rect x="175" y="452" width="352" height="30" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="185" y="471" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#64748b">
+    <tspan font-weight="bold" fill="#e11d48">F4</tspan> Verificador  •  <tspan font-weight="bold" fill="#e11d48">F8</tspan> Pausar  •  <tspan font-weight="bold" fill="#e11d48">ESC</tspan> Cancelar  •  <tspan fill="#f43f5e">Modo Táctil 💕</tspan>
+  </text>
+
+  <!-- RIGHT POS TICKET / CART PANEL (cols: 540 to 785) -->
+  <rect x="540" y="60" width="245" height="422" rx="16" fill="#ffffff" stroke="#fecdd3" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+  <!-- Cart Header -->
+  <rect x="540" y="60" width="245" height="40" rx="16" fill="#fff1f2"/>
+  <rect x="540" y="85" width="245" height="15" fill="#fff1f2"/>
+  <circle cx="558" cy="80" r="5" fill="#f43f5e"/>
+  <text x="570" y="84" font-family="'Segoe UI', Roboto, sans-serif" font-weight="bold" font-size="11.5" fill="#881337">Orden Actual</text>
+  <rect x="710" y="71" width="62" height="18" rx="9" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1"/>
+  <text x="741" y="83" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="bold" fill="#7e22ce" text-anchor="middle">#POS-0842</text>
+
+  <!-- Customer Loyalty info -->
+  <rect x="548" y="106" width="229" height="28" rx="8" fill="#fef2f2"/>
+  <text x="556" y="122" font-size="12">🎀</text>
+  <text x="574" y="119" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#881337">Club Meow: Andrea Pérez</text>
+  <text x="574" y="129" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#e11d48">⭐ 150 puntos acumulados 💕</text>
+
+  <!-- Cart Items List -->
+  <!-- Item 1 -->
+  <g transform="translate(548, 140)">
+    <rect width="229" height="34" rx="8" fill="#fff5f5" stroke="#ffe4e6" stroke-width="1"/>
+    <text x="8" y="24" font-size="15">🐼</text>
+    <text x="30" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519">Peluche Panda Boba</text>
+    <text x="30" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">$18.50 c/u</text>
+    <!-- Counter -->
+    <rect x="150" y="9" width="38" height="16" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="169" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519" text-anchor="middle">1</text>
+    <text x="220" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="900" fill="#881337" text-anchor="end">$18.50</text>
+  </g>
+
+  <!-- Item 2 -->
+  <g transform="translate(548, 178)">
+    <rect width="229" height="34" rx="8" fill="#fff5f5" stroke="#ffe4e6" stroke-width="1"/>
+    <text x="8" y="24" font-size="15">📒</text>
+    <text x="30" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519">Libreta Pastel</text>
+    <text x="30" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">$8.00 c/u</text>
+    <!-- Counter -->
+    <rect x="150" y="9" width="38" height="16" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="169" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519" text-anchor="middle">1</text>
+    <text x="220" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="900" fill="#881337" text-anchor="end">$8.00</text>
+  </g>
+
+  <!-- Item 3 -->
+  <g transform="translate(548, 216)">
+    <rect width="229" height="34" rx="8" fill="#fff5f5" stroke="#ffe4e6" stroke-width="1"/>
+    <text x="8" y="24" font-size="15">🖍️</text>
+    <text x="30" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519">Set 6 Marcadores</text>
+    <text x="30" y="27" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af">$12.00 c/u</text>
+    <!-- Counter -->
+    <rect x="150" y="9" width="38" height="16" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="169" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="bold" fill="#4c0519" text-anchor="middle">1</text>
+    <text x="220" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9.5" font-weight="900" fill="#881337" text-anchor="end">$12.00</text>
+  </g>
+
+  <!-- Coupon line -->
+  <rect x="548" y="258" width="160" height="22" rx="11" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+  <text x="558" y="273" font-family="monospace" font-size="8.5" fill="#9f1239">KAWAII10 (-10%)</text>
+  <rect x="712" y="258" width="65" height="22" rx="11" fill="url(#sakuraGrad)"/>
+  <text x="744" y="273" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">Aplicado 🎀</text>
+
+  <!-- Calculations Summary -->
+  <g transform="translate(552, 290)">
+    <text x="0" y="10" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#64748b">Subtotal (3 art.):</text>
+    <text x="220" y="10" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="end">$38.50</text>
+
+    <text x="0" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#16a34a">Cupón Descuento 10%:</text>
+    <text x="220" y="23" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="bold" fill="#16a34a" text-anchor="end">-$3.85</text>
+
+    <text x="0" y="36" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" fill="#64748b">IVA Mochi (16%):</text>
+    <text x="220" y="36" font-family="'Segoe UI', Roboto, sans-serif" font-size="8.5" font-weight="bold" fill="#334155" text-anchor="end">$5.54</text>
+  </g>
+
+  <!-- Total Banner -->
+  <rect x="548" y="335" width="229" height="42" rx="12" fill="#fff1f2" stroke="#fecdd3" stroke-width="1.2"/>
+  <text x="558" y="352" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="bold" fill="#9f1239" text-transform="uppercase">TOTAL A COBRAR</text>
+  <text x="558" y="368" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#e11d48">Ahorro cupón: $3.85 🌸</text>
+  <text x="768" y="365" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="900" fill="#be123c" text-anchor="end">$40.19</text>
+
+  <!-- Payment buttons -->
+  <g transform="translate(548, 385)">
+    <rect x="0" y="0" width="72" height="24" rx="8" fill="#ffe4e6" stroke="#f43f5e" stroke-width="1"/>
+    <text x="36" y="16" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="bold" fill="#9f1239" text-anchor="middle">💵 Efectivo</text>
+
+    <rect x="78" y="0" width="72" height="24" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="114" y="16" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">💳 Tarjeta</text>
+
+    <rect x="156" y="0" width="73" height="24" rx="8" fill="#ffffff" stroke="#fecdd3" stroke-width="1"/>
+    <text x="192" y="16" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">📱 QR Miau</text>
+  </g>
+
+  <!-- Checkout Primary CTA Button -->
+  <rect x="548" y="418" width="229" height="34" rx="17" fill="url(#berryGrad)" filter="url(#cardShadow)"/>
+  <text x="650" y="439" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">✨ Cobrar &amp; Imprimir Ticket</text>
+  <rect x="740" y="426" width="26" height="18" rx="6" fill="#ffffff" opacity="0.25"/>
+  <text x="753" y="438" font-family="monospace" font-size="8" font-weight="bold" fill="#ffffff" text-anchor="middle">F9</text>
+
+  <!-- Cashier footer notes -->
+  <text x="662" y="468" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#9ca3af" text-anchor="middle">Caja #02 • Sakura Chan • 34 tickets hoy</text>
+</svg>
