@@ -143,14 +143,39 @@ export const projects: Project[] = [
     featured: true,
     images: [
       {
-        url: "/images/projects/qbo_1.svg",
-        alt: "Qbo - Tablero de Dados 2D y Cacho Alalay",
-        caption: "Simulador de dados en tiempo real con motor Flame 2D, acelerómetro y libreta de Cacho Alalay"
+        url: "/images/projects/qbo/qbo_hub.webp",
+        alt: "Qbo - Mesa de Juegos y Selección de Modos",
+        caption: "Mesa de Juegos principal: Cacho Alalay, Cacho Mentiroso, Todis y Mayor o Menor"
       },
       {
-        url: "/images/projects/qbo_2.svg",
-        alt: "Qbo - Modos Dudo, Todis y Arquitectura",
-        caption: "Modo multijugador local Pass & Play, compras integradas y 69 pruebas automatizadas"
+        url: "/images/projects/qbo/qbo_cacho_alalay.webp",
+        alt: "Qbo - Cacho Alalay y Libreta Digital",
+        caption: "Partida en vivo de Cacho Alalay con libreta digital oficial y cálculo de puntos"
+      },
+      {
+        url: "/images/projects/qbo/qbo_todis.webp",
+        alt: "Qbo - Todis y Sensor de Movimiento",
+        caption: "Dinámica social de Todis con detección de lanzamiento por agitado (Shake-to-Roll)"
+      },
+      {
+        url: "/images/projects/qbo/qbo_mayor_menor.webp",
+        alt: "Qbo - Mayor o Menor con Probabilidades",
+        caption: "Modo Mayor o Menor con cálculo dinámico en tiempo real de probabilidades matemáticas"
+      },
+      {
+        url: "/images/projects/qbo/qbo_cacho_mentiroso.webp",
+        alt: "Qbo - Configuración de Cacho Mentiroso",
+        caption: "Configuración de partida en Cacho Mentiroso (vidas, comodines y número de jugadores)"
+      },
+      {
+        url: "/images/projects/qbo/qbo_config_alalay.webp",
+        alt: "Qbo - Reglas y Ajustes de Cacho Alalay",
+        caption: "Panel de configuración de Cacho Alalay con reglas tradicionales de mesa"
+      },
+      {
+        url: "/images/projects/qbo/qbo_splash.webp",
+        alt: "Qbo - Logotipo y Marca Oficial",
+        caption: "Identidad visual y pantalla de inicio con la estética Nocturnal Tabletop"
       }
     ]
   },
