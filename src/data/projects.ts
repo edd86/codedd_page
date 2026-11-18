@@ -17,6 +17,7 @@ export interface Project {
   tags: string[];
   repository?: string;
   demoUrl?: string;
+  privacyPolicyUrl?: string;
   featured?: boolean;
   images: ProjectImage[];
 }
@@ -37,14 +38,14 @@ export const projects: Project[] = [
     featured: true,
     images: [
       {
-        url: "/images/projects/riskhub_1.svg",
-        alt: "Plataforma Web RiskHub Ciberseguridad",
-        caption: "Hero interactivo y panel de diagnóstico de ciberseguridad en RiskHub Tech"
+        url: "/images/projects/risk_hub/landing_1.png",
+        alt: "Plataforma Web RiskHub Ciberseguridad - Hero y Servicios",
+        caption: "Hero principal y catálogo de servicios de ciberseguridad en RiskHub Tech"
       },
       {
-        url: "/images/projects/riskhub_2.svg",
-        alt: "Matriz de Servicios RiskHub",
-        caption: "Catálogo especializado de servicios: Red Team, Pentesting, ISO 27001 y Continuidad del Negocio"
+        url: "/images/projects/risk_hub/landing_2.png",
+        alt: "RiskHub Ciberseguridad - Servicios Red Team y Metodología",
+        caption: "Sección de servicios Red Team y fases metodológicas de auditoría y pentesting"
       }
     ]
   },
@@ -98,6 +99,58 @@ export const projects: Project[] = [
         url: "/images/projects/invitacion_2.svg",
         alt: "Itinerario Protocolar y Mapas",
         caption: "Itinerario del evento con geolocalización interactiva en Google Maps y tarjeta de gratitud"
+      }
+    ]
+  },
+  {
+    id: "chat-stats",
+    title: "Chats Stats – Analítica & Estadísticas de Chats",
+    role: "Desarrollador Móvil Flutter & Creador",
+    period: "2024 – Presente",
+    location: "Sucre, Bolivia",
+    companyOrClient: "CodEDD (Google Play)",
+    description: "Aplicación móvil para analizar historiales de chat de WhatsApp con métricas avanzadas, modo versus, heatmaps y Chat Wrapped 100% local.",
+    fullDescription: "Aplicación móvil Android e iOS desarrollada en Flutter y Dart para el procesamiento y visualización estadística de conversaciones exportadas de WhatsApp (.txt y .zip). Cuenta con arquitectura 100% local basada en SQLite (chat_stats.db) sin backend externo para garantizar privacidad absoluta por diseño; generación de mapas de calor horarios, rankings de participantes, conteo léxico y de emojis, comparativa 'versus' entre remitentes, resúmenes anuales 'Chat Wrapped' listos para compartir con share_plus, bloqueo de seguridad biométrico mediante local_auth e integración publicitaria con Google AdMob.",
+    category: "mobile",
+    tags: ["Flutter", "Dart", "Android", "iOS", "SQLite", "Local Auth", "Google AdMob", "Privacy by Design"],
+    privacyPolicyUrl: "/privacy-policy",
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/chat_stats_1.svg",
+        alt: "Chats Stats - Panel Principal y Estadísticas",
+        caption: "Dashboard analítico de chats con métricas de mensajes, rankings y heatmaps horarios"
+      },
+      {
+        url: "/images/projects/chat_stats_2.svg",
+        alt: "Chats Stats - Chat Wrapped y Modo Versus",
+        caption: "Generador de tarjetas 'Chat Wrapped' y comparativas versus entre participantes"
+      }
+    ]
+  },
+  {
+    id: "qbo-dice-games",
+    title: "Qbo – Suite de Juegos de Mesa con Dados & Motor 2D",
+    role: "Lead Mobile Developer & Arquitecto de Software",
+    period: "2024 – Presente",
+    location: "Sucre, Bolivia",
+    companyOrClient: "CodEDD (Google Play)",
+    description: "Suite móvil de juegos de mesa tradicionales (Cacho Alalay, Dudo, Todis) construida en Flutter con motor Flame 2D, Clean Architecture, acelerómetro y 69 tests unitarios.",
+    fullDescription: "Diseño y desarrollo integral de Qbo (dev.codedd.qbo), una aplicación móvil social offline-first para Android orientada a partidas presenciales locales (Pass & Play) bajo una cuidada estética 'Nocturnal Tabletop'. Implementa una Clean Architecture híbrida que desacopla el motor gráfico de física 2D (Flame Engine) de la lógica de negocio en Dart puro gestionada reactivamente con Riverpod (Code Generation). Integra lanzamiento por movimiento físico mediante acelerómetro (sensors_plus con filtrado vectorial de fuerza G y cooldown adaptativo), motor de audio de baja latencia con buffers circulares, suite de 69 tests automatizados (flutter_test), compras integradas (IAP con Google Play Billing para eliminar publicidad) y monetización ética con Google AdMob (UMP SDK / RGPD).",
+    category: "mobile",
+    tags: ["Flutter", "Flame Engine", "Riverpod", "Dart", "Google Play Billing", "AdMob", "Sensors", "Clean Architecture"],
+    privacyPolicyUrl: "/qbo/privacy-policy",
+    featured: true,
+    images: [
+      {
+        url: "/images/projects/qbo_1.svg",
+        alt: "Qbo - Tablero de Dados 2D y Cacho Alalay",
+        caption: "Simulador de dados en tiempo real con motor Flame 2D, acelerómetro y libreta de Cacho Alalay"
+      },
+      {
+        url: "/images/projects/qbo_2.svg",
+        alt: "Qbo - Modos Dudo, Todis y Arquitectura",
+        caption: "Modo multijugador local Pass & Play, compras integradas y 69 pruebas automatizadas"
       }
     ]
   },

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="wrappedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7928ca"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1b1b"/>
+      <stop offset="100%" stop-color="#161515"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad2)" rx="16"/>
+
+  <!-- Phone Mockup Frame -->
+  <rect x="260" y="25" width="280" height="450" rx="32" fill="#131313" stroke="#06b6d4" stroke-width="2" stroke-opacity="0.6"/>
+  <!-- Screen Area -->
+  <rect x="270" y="40" width="260" height="420" rx="24" fill="#0d0d0d"/>
+
+  <!-- Phone Notch/Island -->
+  <rect x="360" y="48" width="80" height="12" rx="6" fill="#1a1a1a"/>
+
+  <!-- App Header -->
+  <text x="300" y="85" fill="#ffffff" font-family="sans-serif" font-size="16" font-weight="bold">Modo Versus &amp; Wrapped</text>
+
+  <!-- Chat Wrapped Card -->
+  <rect x="285" y="105" width="230" height="150" rx="16" fill="url(#wrappedGrad)"/>
+  <text x="305" y="132" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold" letter-spacing="1">CHAT WRAPPED 2024</text>
+  <text x="305" y="155" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="800">¡Tu año en cifras!</text>
+  <text x="305" y="178" fill="#e0e3e5" font-family="sans-serif" font-size="11">Día más activo: Sábado</text>
+  <text x="305" y="196" fill="#e0e3e5" font-family="sans-serif" font-size="11">Hora pico: 21:00 – 23:00</text>
+  <text x="305" y="214" fill="#e0e3e5" font-family="sans-serif" font-size="11">Racha continua: 142 días</text>
+
+  <rect x="305" y="228" width="110" height="18" rx="9" fill="#000000" fill-opacity="0.3"/>
+  <text x="360" y="241" fill="#ffffff" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">COMPARTIR ↗</text>
+
+  <!-- Versus Section -->
+  <rect x="285" y="270" width="230" height="135" rx="14" fill="url(#cardGrad2)" stroke="#ffffff" stroke-opacity="0.1"/>
+  <text x="300" y="295" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold">Participante A vs B</text>
+
+  <!-- Bar comparison 1 -->
+  <text x="300" y="320" fill="#988d9f" font-family="sans-serif" font-size="10">Mensajes Totales</text>
+  <rect x="300" y="328" width="110" height="8" rx="4" fill="#a855f7"/>
+  <rect x="415" y="328" width="85" height="8" rx="4" fill="#06b6d4"/>
+  <text x="300" y="348" fill="#a855f7" font-family="sans-serif" font-size="9" font-weight="bold">56% (27,040)</text>
+  <text x="460" y="348" fill="#06b6d4" font-family="sans-serif" font-size="9" font-weight="bold">44% (21,250)</text>
+
+  <!-- Comparison 2 -->
+  <text x="300" y="368" fill="#988d9f" font-family="sans-serif" font-size="10">Tiempo Respuesta Promedio</text>
+  <text x="300" y="386" fill="#ffffff" font-family="sans-serif" font-size="11" font-weight="bold">2.4 min  vs  3.1 min</text>
+
+  <!-- Bottom Privacy Badge -->
+  <rect x="285" y="415" width="230" height="35" rx="10" fill="#131313" stroke="#a855f7" stroke-width="1" stroke-opacity="0.3"/>
+  <text x="400" y="437" fill="#4cd7f6" font-family="sans-serif" font-size="10" text-anchor="middle">🔒 SQLite Local · Cero Servidores</text>
+</svg>

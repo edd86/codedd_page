@@ -1,3 +1,525 @@
 ---
-return Astro.redirect('/privacy', 301);
+import BaseLayout from "../layouts/base_layout.astro";
+import { profileData } from "../data/profile";
+
+const pageTitle = "Política de Privacidad | Chats Stats - CodEDD";
+const pageDescription = "Política de privacidad y tratamiento de datos de la aplicación móvil Chats Stats (dev.codedd.chat_stats). Procesamiento 100% local, sin servidores propios ni recopilación oculta.";
+const lastUpdated = "6 de octubre de 2026";
 ---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-4xl mx-auto space-y-10 py-6">
+    <!-- Breadcrumb / Back button -->
+    <div class="flex items-center justify-between">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-neutral-muted hover:text-white transition-colors group"
+      >
+        <svg
+          class="w-4 h-4 transition-transform group-hover:-translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        <span>Volver al inicio</span>
+      </a>
+
+      <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-neutral-muted border border-white/10">
+        Actualizado: {lastUpdated}
+      </span>
+    </div>
+
+    <!-- Header Hero Card -->
+    <header class="bento-card p-6 sm:p-10 relative overflow-hidden group">
+      <!-- Glow effect -->
+      <div
+        class="absolute -top-20 -right-20 w-80 h-80 bg-primary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/30 transition-all duration-500"
+      ></div>
+
+      <div class="relative z-10 space-y-4">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          <span class="px-3 py-1 rounded-full bg-primary/10 text-primary-light border border-primary/20 text-xs font-semibold">
+            Google Play & App Store Compliance
+          </span>
+          <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary-light border border-secondary/20 text-xs font-mono">
+            dev.codedd.chat_stats
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Política de <span class="text-gradient">Privacidad</span>
+        </h1>
+        <p class="text-secondary text-base sm:text-lg font-medium">
+          Aplicación Móvil: Chats Stats — Desarrollada por Edward Cristóbal Díaz Valda (CodEDD)
+        </p>
+        <p class="text-neutral-variant text-sm sm:text-base leading-relaxed max-w-2xl">
+          Esta Política de Privacidad describe de manera transparente, rigurosa y verificable el tratamiento, almacenamiento y protección de la información al utilizar la aplicación móvil <strong class="text-white">Chats Stats</strong> en Android e iOS.
+        </p>
+      </div>
+
+      <!-- Quick Metadata Grid -->
+      <div class="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">ARQUITECTURA</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 100% Local (Sin Servidores)
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">DATOS DE CHAT</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Nunca salen de tu móvil
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">PUBLICIDAD</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Google AdMob
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">CONTACTO DPO/DEV</span>
+          <a href={`mailto:${profileData.contact.email}`} class="text-primary hover:underline font-semibold block mt-1 truncate">
+            {profileData.contact.email}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Privacy Highlights Banner (Lumina Bento) -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4" aria-label="Principios fundamentales de privacidad">
+      <div class="bento-card p-5 space-y-2 border-emerald-500/20 bg-emerald-950/10">
+        <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+          🔒
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Cero Servidores Propios</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          No contamos con backend, servidores ni bases de datos remotas. Los chats importados se analizan exclusivamente en la memoria y almacenamiento interno de tu dispositivo.
+        </p>
+      </div>
+
+      <div class="bento-card p-5 space-y-2 border-secondary/20 bg-secondary/5">
+        <div class="w-9 h-9 rounded-lg bg-secondary/20 text-secondary-light flex items-center justify-center font-bold text-lg">
+          🚫
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Sin Permisos Invasivos</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          La app no solicita acceso a tus contactos, agenda telefónica, ubicación geográfica GPS, cámara fotográfica, micrófono ni galería de fotos.
+        </p>
+      </div>
+
+      <div class="bento-card p-5 space-y-2 border-primary/20 bg-primary/5">
+        <div class="w-9 h-9 rounded-lg bg-primary/20 text-primary-light flex items-center justify-center font-bold text-lg">
+          🛡️
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Control y Eliminación Total</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          Tú posees el control absoluto. Puedes borrar todos los datos en cualquier instante eliminando el almacenamiento de la app o desinstalándola de tu dispositivo.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick Table of Contents -->
+    <nav class="bento-card p-5 space-y-3" aria-label="Índice de contenidos">
+      <h2 class="text-xs font-mono uppercase tracking-wider text-neutral-muted">Índice de la Política de Privacidad</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+        <a href="#seccion-1" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">01.</span> Introducción y Responsable
+        </a>
+        <a href="#seccion-2" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">02.</span> Datos que recopilamos (Inventario)
+        </a>
+        <a href="#seccion-3" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">03.</span> Finalidad y Uso de los Datos
+        </a>
+        <a href="#seccion-4" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">04.</span> Almacenamiento, Seguridad y Retención
+        </a>
+        <a href="#seccion-5" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">05.</span> Permisos del Dispositivo Móvil
+        </a>
+        <a href="#seccion-6" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">06.</span> Terceros y Servicios Publicitarios
+        </a>
+        <a href="#seccion-7" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">07.</span> Anuncios y Gestión del ID Publicitario
+        </a>
+        <a href="#seccion-8" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">08.</span> Derechos del Usuario y Eliminación
+        </a>
+        <a href="#seccion-9" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">09.</span> Privacidad de Menores de Edad
+        </a>
+        <a href="#seccion-10" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">10.</span> Cambios y Contacto Legal
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Legal Content Sections -->
+    <article class="space-y-8 text-neutral-variant text-sm sm:text-base leading-relaxed">
+
+      <!-- Sección 1: Introducción -->
+      <section id="seccion-1" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">01</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Introducción y Responsable del Tratamiento</h2>
+        </div>
+        <p>
+          Bienvenido a <strong class="text-white">Chats Stats</strong> (identificador de paquete de aplicación / Package ID: <code class="text-secondary font-mono text-xs bg-white/5 px-2 py-0.5 rounded border border-white/10">dev.codedd.chat_stats</code>), disponible para dispositivos con sistemas operativos Android e iOS.
+        </p>
+        <p>
+          El responsable del desarrollo, mantenimiento y tratamiento asociado a la aplicación es <strong class="text-white">Edward Cristóbal Díaz Valda</strong> (marca y alias profesional <strong class="text-white">CodEDD</strong>), con domicilio y base de desarrollo en Sucre, Bolivia, y correo electrónico de contacto oficial: <a href={`mailto:${profileData.contact.email}`} class="text-primary hover:underline font-medium">{profileData.contact.email}</a>.
+        </p>
+        <p>
+          Chats Stats es una herramienta de productividad, análisis estadístico y visualización gráfica diseñada para procesar historiales de chat exportados voluntariamente por el usuario desde WhatsApp (en formato <code class="text-secondary font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded">.txt</code> o <code class="text-secondary font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded">.zip</code>). La aplicación genera métricas cuantitativas, rankings de participantes, gráficos temporales (heatmaps), análisis léxico y de emoticonos, comparativas "versus" y resúmenes anuales tipo "Chat Wrapped".
+        </p>
+        <div class="p-4 rounded-xl bg-primary/5 border border-primary/20 text-xs sm:text-sm text-neutral-variant">
+          <strong class="text-white block mb-1">Compromiso de Privacidad por Diseño (Privacy by Design):</strong>
+          La premisa fundamental de Chats Stats es la confidencialidad absoluta de tus conversaciones. La aplicación funciona con un modelo de ejecución <strong>estrictamente local</strong>: ningún mensaje, nombre, número telefónico ni metadato de tus conversaciones es enviado, sincronizado ni transmitido jamás a servidores propios o externos.
+        </div>
+      </section>
+
+      <!-- Sección 2: Datos que recopilamos (Inventario verificado) -->
+      <section id="seccion-2" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">02</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Datos que Recopilamos y Manejamos</h2>
+        </div>
+        <p>
+          En estricto cumplimiento con la <em>User Data Policy</em> de Google Play Store y el Reglamento General de Protección de Datos (RGPD / GDPR), a continuación detallamos el inventario exhaustivo de datos procesados por la aplicación, verificado directamente en el código fuente de Chats Stats:
+        </p>
+
+        <!-- Tabla de Inventario de Datos -->
+        <div class="overflow-x-auto rounded-xl border border-white/10 my-4">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-surface-lowest text-white font-display border-b border-white/10">
+              <tr>
+                <th class="p-3 sm:p-4">Categoría de Dato</th>
+                <th class="p-3 sm:p-4">Datos Específicos</th>
+                <th class="p-3 sm:p-4">Finalidad Principal</th>
+                <th class="p-3 sm:p-4">Base Legal</th>
+                <th class="p-3 sm:p-4">Almacenamiento y Retención</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-neutral-variant">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Contenido de Chats (Introducido por el usuario)</td>
+                <td class="p-3 sm:p-4">Texto de mensajes, fechas y horas, nombres o números de remitentes, eventos de sistema, indicadores de edición o eliminación y nombre del archivo importado.</td>
+                <td class="p-3 sm:p-4">Cálculo de métricas locales, rankings, gráficos interactivos, búsqueda y generación de resúmenes.</td>
+                <td class="p-3 sm:p-4">Consentimiento explícito y ejecución de la funcionalidad solicitada por el usuario.</td>
+                <td class="p-3 sm:p-4">100% Local en base de datos SQLite (<code class="text-secondary text-xs">chat_stats.db</code>). Permanece hasta que el usuario borre los datos de la app o la desinstale.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Archivos Temporales y Caché</td>
+                <td class="p-3 sm:p-4">Copia de descompresión temporal del archivo <code class="text-secondary text-xs">.txt</code> o <code class="text-secondary text-xs">.zip</code> exportado de WhatsApp.</td>
+                <td class="p-3 sm:p-4">Lectura y procesamiento por lotes durante el proceso inicial de importación.</td>
+                <td class="p-3 sm:p-4">Ejecución del servicio.</td>
+                <td class="p-3 sm:p-4">Almacenamiento en el directorio interno de caché de la app; sobreescribible o purgable por el sistema operativo.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Preferencias de la App</td>
+                <td class="p-3 sm:p-4">Indicador booleano de bloqueo de seguridad activado, configuraciones de visualización.</td>
+                <td class="p-3 sm:p-4">Permitir la protección de acceso a la app mediante biometría o PIN local.</td>
+                <td class="p-3 sm:p-4">Interés legítimo y preferencia del usuario.</td>
+                <td class="p-3 sm:p-4">SharedPreferences (Android) / UserDefaults (iOS) en el dispositivo.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Identificadores Publicitarios (Terceros - AdMob)</td>
+                <td class="p-3 sm:p-4">Google Advertising ID (GAID) en Android o IDFA en iOS, dirección IP aproximada, métricas de rendimiento del anuncio.</td>
+                <td class="p-3 sm:p-4">Monetización mediante despliegue de banners y anuncios intersticiales provistos por Google Mobile Ads.</td>
+                <td class="p-3 sm:p-4">Interés legítimo / Consentimiento según región (EEA/UK).</td>
+                <td class="p-3 sm:p-4">Gestionado directamente por los servidores de Google AdMob conforme a sus políticas de retención.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Datos que NO Recopilamos</td>
+                <td class="p-3 sm:p-4 text-emerald-400">NO recopilamos nombres reales de cuenta, correos electrónicos de registro, contraseñas, ubicación GPS, contactos de la agenda, fotos de la galería ni grabaciones.</td>
+                <td class="p-3 sm:p-4">N/A</td>
+                <td class="p-3 sm:p-4">N/A</td>
+                <td class="p-3 sm:p-4">Inexistente (No se solicita cuenta de usuario ni registro).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección 3: Cómo usamos los datos -->
+      <section id="seccion-3" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">03</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Finalidad y Uso Exclusivo de los Datos</h2>
+        </div>
+        <p>
+          Los datos importados por el usuario se utilizan única y exclusivamente para brindar las funciones estadísticas y visuales dentro de Chats Stats:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-neutral-variant pl-2">
+          <li><strong>Generación de Estadísticas Descriptivas:</strong> Contabilización total de mensajes, promedio de palabras por mensaje, conteo de caracteres y días con mayor actividad comunicacional.</li>
+          <li><strong>Mapas de Calor y Distribución Temporal:</strong> Análisis de horarios y días de la semana con mayor flujo de conversación para generar matrices visuales de actividad (heatmaps).</li>
+          <li><strong>Análisis Léxico y Emojis:</strong> Identificación de términos más recurrentes y emojis más empleados entre los participantes.</li>
+          <li><strong>Modo Versus y Comparativas:</strong> Comparación directa entre dos participantes del chat para determinar tiempos de respuesta aproximados y volumen relativo de participación.</li>
+          <li><strong>Generación de Chat Wrapped y Compartición Voluntaria:</strong> La app genera una imagen digital en formato PNG que sintetiza los hitos del chat. Esta imagen se guarda temporalmente en la memoria de la aplicación y <strong>solo se comparte si el usuario presiona voluntariamente el botón de compartir</strong> haciendo uso de la hoja nativa de compartición del sistema operativo (<code class="text-secondary text-xs">share_plus</code>).</li>
+        </ul>
+        <p class="text-xs text-neutral-muted">
+          Nota importante: No realizamos entrenamiento de modelos de inteligencia artificial externa con el contenido de tus mensajes ni ejecutamos procesamiento analítico fuera de los componentes nativos de la aplicación.
+        </p>
+      </section>
+
+      <!-- Sección 4: Almacenamiento, Seguridad y Retención -->
+      <section id="seccion-4" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">04</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Almacenamiento, Seguridad y Retención</h2>
+        </div>
+        <p>
+          Entender dónde y cómo se resguardan tus datos es vital para evaluar la seguridad de la app:
+        </p>
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold flex items-center gap-2">
+              <span class="text-primary font-mono">▸</span> Almacenamiento Local Aislado (App Sandbox)
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Toda la información se aloja en una base de datos relacional SQLite (<code class="text-secondary font-mono text-xs">chat_stats.db</code>) ubicada en el almacenamiento privado y aislado de la aplicación (sandbox) proporcionado por los sistemas operativos Android e iOS. Ninguna otra aplicación instalada en el dispositivo puede acceder a este almacenamiento salvo que el dispositivo haya sido vulnerado mediante modificaciones root o jailbreak.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold flex items-center gap-2">
+              <span class="text-primary font-mono">▸</span> Nivel de Cifrado de la Base de Datos
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Por transparencia con el usuario y de acuerdo a la verificación del código fuente, el archivo de la base de datos SQLite opera en el almacenamiento interno estándar protegido por el sistema de archivos del sistema operativo, <strong>sin una capa adicional de cifrado criptográfico específico a nivel de base de datos</strong> (como SQLCipher). Sin embargo, se beneficia del cifrado de hardware y disco completo activado de forma predeterminada en los dispositivos móviles modernos con Android (Android FBE - File-Based Encryption) e iOS (Data Protection).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold flex items-center gap-2">
+              <span class="text-primary font-mono">▸</span> Bloqueo de Privacidad Biométrico (Recomendado)
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Para añadir una capa adicional de protección frente a accesos físicos no autorizados a tu dispositivo, Chats Stats incluye una función opcional de <strong>Bloqueo de Privacidad</strong> con huella dactilar, reconocimiento facial o código de desbloqueo del dispositivo mediante la API nativa <code class="text-secondary font-mono text-xs">local_auth</code>. Recomendamos mantener activa esta opción en los ajustes de la aplicación.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 5: Permisos del Dispositivo -->
+      <section id="seccion-5" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">05</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Permisos del Dispositivo Móvil</h2>
+        </div>
+        <p>
+          Chats Stats sigue el principio de mínimo privilegio. Solo solicita los permisos estrictamente indispensables para su funcionamiento técnico:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl bg-surface-lowest border border-white/10">
+            <div class="flex items-center gap-2 font-mono text-white font-semibold mb-1">
+              <span class="text-emerald-400">✓</span> INTERNET
+            </div>
+            <p class="text-neutral-muted">
+              Utilizado exclusivamente para descargar tipografías dinámicas (Google Fonts) y comunicarse con los servidores de Google AdMob para cargar anuncios publicitarios.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-surface-lowest border border-white/10">
+            <div class="flex items-center gap-2 font-mono text-white font-semibold mb-1">
+              <span class="text-emerald-400">✓</span> USE_BIOMETRIC / USE_FINGERPRINT
+            </div>
+            <p class="text-neutral-muted">
+              Utilizado de manera opcional para permitir al usuario bloquear el acceso no autorizado a sus estadísticas mediante los sensores biométricos de su teléfono.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-xs sm:text-sm text-neutral-variant">
+          <strong class="text-rose-300 block mb-1">Permisos NO solicitados ni utilizados:</strong>
+          La app <strong class="text-white">NO accede ni solicita permisos</strong> para: Contactos / Agenda (<code class="text-rose-300">READ_CONTACTS</code>), Ubicación precisa o aproximada (<code class="text-rose-300">ACCESS_FINE_LOCATION</code>), Cámara (<code class="text-rose-300">CAMERA</code>), Micrófono (<code class="text-rose-300">RECORD_AUDIO</code>), Mensajes de texto SMS (<code class="text-rose-300">READ_SMS</code>) ni lectura indiscriminada de almacenamiento externo.
+        </div>
+      </section>
+
+      <!-- Sección 6: Compartición con Terceros -->
+      <section id="seccion-6" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">06</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Compartición de Información con Terceros</h2>
+        </div>
+        <p class="font-semibold text-white">
+          Declaración expresa de no venta de datos:
+        </p>
+        <p>
+          <strong class="text-white">No vendemos, no alquilamos, no monetizamos ni divulgamos tus datos personales ni el contenido de tus chats a intermediarios de datos, empresas de investigación de mercado ni anunciantes.</strong>
+        </p>
+        <p>
+          Los únicos proveedores tecnológicos externos integrados en la aplicación son:
+        </p>
+        <div class="space-y-3 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10">
+            <h3 class="text-white font-semibold text-sm mb-1">1. Google Mobile Ads (Google AdMob)</h3>
+            <p class="text-neutral-muted mb-2">
+              Se emplea para servir anuncios dentro de la aplicación con la finalidad de financiar el desarrollo continuo de la herramienta. AdMob puede recopilar y procesar identificadores del dispositivo (como el ID de publicidad de Google o IDFA), dirección IP, datos generales de fallos de red y mediciones de interacción publicitaria.
+            </p>
+            <p class="text-neutral-muted">
+              Para conocer en detalle cómo Google gestiona los datos en servicios publicitarios, consulta la <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Política de Publicidad de Google</a> y su <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Política de Privacidad General</a>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10">
+            <h3 class="text-white font-semibold text-sm mb-1">2. Google Fonts</h3>
+            <p class="text-neutral-muted">
+              Utilizado para descargar y renderizar tipografías optimizadas para las pantallas y gráficos visuales de la aplicación. Las solicitudes a Google Fonts no transmiten información personal ni datos de tus conversaciones.
+            </p>
+          </div>
+        </div>
+        <p class="text-xs text-neutral-muted">
+          Aclaración técnica: Chats Stats <strong>no incluye</strong> herramientas de telemetría invasiva, Firebase Analytics, Facebook SDK, Crashlytics ni ningún otro sistema de rastreo de comportamiento del usuario.
+        </p>
+      </section>
+
+      <!-- Sección 7: Publicidad y Gestión de Identificadores (Opt-Out) -->
+      <section id="seccion-7" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">07</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Anuncios y Gestión del Identificador Publicitario (Opt-Out)</h2>
+        </div>
+        <p>
+          Los anuncios provistos por Google AdMob pueden ser personalizados o no personalizados dependiendo de la configuración de privacidad de tu dispositivo y de tu ubicación geográfica (incluyendo normativas como el Reglamento General de Protección de Datos en la Unión Europea / Reino Unido y la CCPA en California).
+        </p>
+        <p>
+          Como usuario, tienes el derecho de restablecer o eliminar en cualquier momento tu Identificador de Publicidad móvil:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <span class="font-display font-semibold text-secondary block">En dispositivos Android:</span>
+            <ol class="list-decimal list-inside space-y-1 text-neutral-muted">
+              <li>Abre la aplicación <strong class="text-white">Ajustes / Configuración</strong> del teléfono.</li>
+              <li>Navega hasta <strong class="text-white">Google → Todos los servicios → Anuncios</strong> (o <em>Privacidad → Anuncios</em>).</li>
+              <li>Pulsa sobre <strong class="text-white">"Restablecer ID de publicidad"</strong> o <strong class="text-white">"Eliminar ID de publicidad"</strong>.</li>
+            </ol>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <span class="font-display font-semibold text-secondary block">En dispositivos iOS (iPhone/iPad):</span>
+            <ol class="list-decimal list-inside space-y-1 text-neutral-muted">
+              <li>Abre los <strong class="text-white">Ajustes</strong> del sistema.</li>
+              <li>Entra en <strong class="text-white">Privacidad y seguridad → Rastreo</strong>.</li>
+              <li>Desactiva el permiso de rastreo general o desactiva la opción para Chats Stats.</li>
+              <li>En <strong class="text-white">Publicidad de Apple</strong>, puedes inhabilitar los anuncios personalizados.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 8: Derechos del Usuario y Eliminación de Datos -->
+      <section id="seccion-8" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">08</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Derechos del Usuario y Eliminación de Datos</h2>
+        </div>
+        <p>
+          Bajo las normativas globales de protección de datos (incluyendo los artículos 15 al 22 del RGPD / GDPR de la UE y la Ley de Privacidad del Consumidor de California - CCPA), tienes reconocidos los derechos de:
+        </p>
+        <ul class="list-disc list-inside space-y-1.5 text-neutral-variant pl-2 text-xs sm:text-sm">
+          <li><strong>Derecho de Acceso:</strong> Saber qué datos tuyos son tratados (en este caso, únicamente los chats que tú mismo importas).</li>
+          <li><strong>Derecho de Rectificación:</strong> Modificar los chats importando una versión corregida.</li>
+          <li><strong>Derecho de Supresión ("Derecho al Olvido"):</strong> Eliminar por completo cualquier rastro de tus conversaciones.</li>
+          <li><strong>Derecho a la Limitación del Tratamiento y Oposición:</strong> Restringir o pausar el uso de la aplicación cuando lo estimes conveniente.</li>
+          <li><strong>Derecho a la Portabilidad:</strong> Conservar tu archivo original de chat de WhatsApp, el cual nunca es retenido exclusivamente por Chats Stats.</li>
+        </ul>
+
+        <div class="p-4 rounded-xl bg-primary/10 border border-primary/30 space-y-2">
+          <h3 class="text-white font-semibold text-sm flex items-center gap-2">
+            🗑️ Procedimiento Directo para Eliminar Todos tus Datos:
+          </h3>
+          <p class="text-xs sm:text-sm text-neutral-variant leading-relaxed">
+            Dado que la totalidad de los datos analizados reside única y exclusivamente dentro de la memoria interna de tu dispositivo móvil y <strong>no existe ninguna copia en servidores externos</strong>, no requieres enviar una solicitud por correo para eliminar tus datos. Puedes ejercer tu derecho de supresión de manera inmediata y autónoma mediante cualquiera de estos métodos:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs">
+            <div class="bg-surface-lowest/80 p-3 rounded-lg border border-white/5">
+              <span class="text-white font-semibold block mb-1">Método 1: Borrar Almacenamiento del Sistema</span>
+              <p class="text-neutral-muted">
+                Ve a <strong class="text-white">Ajustes del teléfono → Aplicaciones → Chats Stats → Almacenamiento y caché → "Borrar datos"</strong> (o "Borrar almacenamiento"). Esto purgará instantáneamente la base de datos SQLite y todos los archivos en caché.
+              </p>
+            </div>
+            <div class="bg-surface-lowest/80 p-3 rounded-lg border border-white/5">
+              <span class="text-white font-semibold block mb-1">Método 2: Desinstalar la Aplicación</span>
+              <p class="text-neutral-muted">
+                Al desinstalar Chats Stats de tu dispositivo Android o iOS, el sistema operativo elimina irreversiblemente el directorio sandbox de la aplicación, borrando de forma automática y definitiva todos los chats, configuraciones e historiales importados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 9: Datos de Menores -->
+      <section id="seccion-9" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">09</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Privacidad de Menores de Edad</h2>
+        </div>
+        <p>
+          Chats Stats es una aplicación de análisis estadístico destinada al público general y no está dirigida de manera específica a niños o menores de 14 años (o 13 años conforme a las leyes aplicables como COPPA en los Estados Unidos).
+        </p>
+        <p>
+          No recopilamos deliberadamente ningún tipo de información de identificación personal de menores de edad. Si un padre, madre o tutor legal detecta que un menor bajo su tutela ha importado conversaciones en la aplicación y desea eliminarlas, puede hacerlo de inmediato limpiando el almacenamiento de la app o desinstalándola del dispositivo conforme a las instrucciones detalladas en la sección anterior.
+        </p>
+      </section>
+
+      <!-- Sección 10: Cambios en la Política y Contacto Legal -->
+      <section id="seccion-10" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">10</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Cambios en la Política y Contacto Legal</h2>
+        </div>
+        <p>
+          Nos reservamos el derecho de actualizar o modificar esta Política de Privacidad de forma periódica para reflejar mejoras en la aplicación, nuevas funciones o exigencias regulatorias de Google Play y Apple App Store.
+        </p>
+        <p>
+          Cualquier modificación será publicada de forma visible en esta misma página web con su correspondiente fecha de actualización en la cabecera. Si los cambios fuesen sustanciales respecto a cómo se procesan los datos, se notificará al usuario mediante un aviso visible dentro de la propia aplicación o en las notas de actualización de la tienda de aplicaciones.
+        </p>
+
+        <!-- Card de Contacto -->
+        <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-base font-display font-bold text-white">¿Tienes consultas o deseas ejercer tus derechos?</h3>
+            <p class="text-xs sm:text-sm text-neutral-variant mt-1">
+              Para cualquier duda, aclaración técnica o consulta legal sobre esta política, comunícate directamente con el desarrollador responsable:
+            </p>
+            <div class="mt-2 text-xs font-mono text-neutral-muted space-y-0.5">
+              <p><span class="text-white">Desarrollador:</span> Edward Cristóbal Díaz Valda (CodEDD)</p>
+              <p><span class="text-white">Ubicación:</span> Sucre, Bolivia</p>
+            </div>
+          </div>
+
+          <a
+            href={`mailto:${profileData.contact.email}?subject=Consulta%20Privacidad%20Chats%20Stats`}
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium text-xs sm:text-sm shadow-glow-primary hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
+          >
+            Contactar por Email
+          </a>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Bottom Actions & Back link -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs text-neutral-muted">
+      <p>
+        Documento oficial de Política de Privacidad para <strong class="text-white">Chats Stats</strong>. Válido para Google Play Console y App Store Connect.
+      </p>
+      <a
+        href="/"
+        class="text-primary hover:text-white transition-colors flex items-center gap-1 font-medium"
+      >
+        <span>Volver a la portada de CodEDD</span>
+        <span>→</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

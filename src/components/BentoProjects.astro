@@ -67,7 +67,7 @@ import ProjectModal from "./ProjectModal.astro";
             <img
               src={mainImg}
               alt={project.title}
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
               loading="lazy"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-[#131313] via-transparent to-transparent opacity-80"></div>
@@ -142,6 +142,15 @@ import ProjectModal from "./ProjectModal.astro";
                   title="Probar demo en vivo"
                 >
                   <span>Demo ↗</span>
+                </a>
+              )}
+              {project.privacyPolicyUrl && (
+                <a
+                  href={project.privacyPolicyUrl}
+                  class="text-xs font-mono font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 transition-colors"
+                  title="Política de Privacidad de la aplicación"
+                >
+                  <span>Privacidad ↗</span>
                 </a>
               )}
               {project.repository && (

@@ -1,0 +1,544 @@
+---
+import BaseLayout from "../../layouts/base_layout.astro";
+import { profileData } from "../../data/profile";
+
+const pageTitle = "Política de Privacidad | Qbo: Cacho, Todis y Dados - CodEDD";
+const pageDescription = "Política de privacidad y especificaciones de seguridad de datos de la aplicación móvil Qbo: Cacho, Todis y Dados (dev.codedd.qbo). Procesamiento 100% offline-first, sin backend propio y con respeto absoluto a tu privacidad.";
+const lastUpdated = "17 de noviembre de 2026";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <div class="max-w-4xl mx-auto space-y-10 py-6">
+    <!-- Breadcrumb / Back button -->
+    <div class="flex items-center justify-between">
+      <a
+        href="/"
+        class="inline-flex items-center gap-2 text-sm text-neutral-muted hover:text-white transition-colors group"
+      >
+        <svg
+          class="w-4 h-4 transition-transform group-hover:-translate-x-1"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        <span>Volver al inicio</span>
+      </a>
+
+      <span class="text-xs px-3 py-1 rounded-full bg-white/5 text-neutral-muted border border-white/10">
+        Actualizado: {lastUpdated}
+      </span>
+    </div>
+
+    <!-- Header Hero Card -->
+    <header class="bento-card p-6 sm:p-10 relative overflow-hidden group">
+      <!-- Glow effect -->
+      <div
+        class="absolute -top-20 -right-20 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none group-hover:bg-secondary/30 transition-all duration-500"
+      ></div>
+
+      <div class="relative z-10 space-y-4">
+        <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+          <span class="px-3 py-1 rounded-full bg-primary/10 text-primary-light border border-primary/20 text-xs font-semibold">
+            Google Play Data Safety &amp; RGPD Compliance
+          </span>
+          <span class="px-3 py-1 rounded-full bg-secondary/10 text-secondary-light border border-secondary/20 text-xs font-mono">
+            dev.codedd.qbo
+          </span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-white tracking-tight leading-tight">
+          Política de <span class="text-gradient">Privacidad</span>
+        </h1>
+        <p class="text-secondary text-base sm:text-lg font-medium">
+          Aplicación Móvil: Qbo: Cacho, Todis y Dados — Desarrollada por Edward Cristóbal Díaz Valda (CodEDD)
+        </p>
+        <p class="text-neutral-variant text-sm sm:text-base leading-relaxed max-w-2xl">
+          Esta Política de Privacidad describe el tratamiento riguroso, ético y transparente de los datos en la aplicación móvil <strong class="text-white">Qbo</strong> para Android, conforme a las políticas de seguridad de Google Play Store, el RGPD (GDPR) y la normativa COPPA.
+        </p>
+      </div>
+
+      <!-- Quick Metadata Grid -->
+      <div class="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">ARQUITECTURA</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> 100% Offline-First
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">ACELERÓMETRO</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Solo RAM Volátil (0 Guardado)
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">MONETIZACIÓN</span>
+          <span class="text-white font-semibold flex items-center gap-1.5 mt-1">
+            <span class="w-2 h-2 rounded-full bg-amber-400"></span> AdMob + Play Billing (IAP)
+          </span>
+        </div>
+        <div class="bg-surface-lowest/60 rounded-xl p-3 border border-white/5">
+          <span class="text-neutral-muted block font-mono">CONTACTO DPO/DEV</span>
+          <a href={`mailto:${profileData.contact.email}`} class="text-primary hover:underline font-semibold block mt-1 truncate">
+            {profileData.contact.email}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Key Privacy Highlights Banner (Lumina Bento) -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4" aria-label="Principios fundamentales de privacidad de Qbo">
+      <div class="bento-card p-5 space-y-2 border-emerald-500/20 bg-emerald-950/10">
+        <div class="w-9 h-9 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg">
+          🎲
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Cero Servidores Propios</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          Qbo es un juego local presencial (Pass &amp; Play). No cuenta con servidores propios, APIs de backend en la nube ni bases de datos remotas.
+        </p>
+      </div>
+
+      <div class="bento-card p-5 space-y-2 border-secondary/20 bg-secondary/5">
+        <div class="w-9 h-9 rounded-lg bg-secondary/20 text-secondary-light flex items-center justify-center font-bold text-lg">
+          👤
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Cero Cuentas ni Registros</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          No requiere inicio de sesión, correos electrónicos ni contraseñas. Puedes abrir la app y jugar al instante sin identificarte.
+        </p>
+      </div>
+
+      <div class="bento-card p-5 space-y-2 border-primary/20 bg-primary/5">
+        <div class="w-9 h-9 rounded-lg bg-primary/20 text-primary-light flex items-center justify-center font-bold text-lg">
+          📴
+        </div>
+        <h2 class="text-base font-display font-bold text-white">Fuentes y Assets 100% Offline</h2>
+        <p class="text-xs text-neutral-variant leading-relaxed">
+          Todas las fuentes (SpaceGrotesk y Geist), audios y spritesheets están empaquetados localmente en la app. Cero peticiones web innecesarias.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick Table of Contents -->
+    <nav class="bento-card p-5 space-y-3" aria-label="Índice de contenidos">
+      <h2 class="text-xs font-mono uppercase tracking-wider text-neutral-muted">Índice de la Política de Privacidad de Qbo</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+        <a href="#seccion-1" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">01.</span> Identificación y Responsable del Desarrollo
+        </a>
+        <a href="#seccion-2" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">02.</span> Almacenamiento Local (SharedPreferences)
+        </a>
+        <a href="#seccion-3" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">03.</span> Sensores y Hardware (Acelerómetro &amp; Hápticos)
+        </a>
+        <a href="#seccion-4" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">04.</span> Permisos de Android y Seguridad
+        </a>
+        <a href="#seccion-5" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">05.</span> Publicidad de Terceros y RGPD (Google AdMob &amp; UMP)
+        </a>
+        <a href="#seccion-6" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">06.</span> Compras Integradas (Google Play Billing)
+        </a>
+        <a href="#seccion-7" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">07.</span> Clasificación de Contenido y Menores (COPPA / IARC)
+        </a>
+        <a href="#seccion-8" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">08.</span> Formulario de Seguridad de Datos (Data Safety)
+        </a>
+        <a href="#seccion-9" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">09.</span> Derechos del Usuario y Eliminación de Datos
+        </a>
+        <a href="#seccion-10" class="text-neutral-variant hover:text-primary transition-colors flex items-center gap-1.5">
+          <span class="text-primary font-mono">10.</span> Cambios y Contacto de Soporte
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Legal Content Sections -->
+    <article class="space-y-8 text-neutral-variant text-sm sm:text-base leading-relaxed">
+
+      <!-- Sección 1: Responsable -->
+      <section id="seccion-1" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">01</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Identificación y Responsable del Tratamiento</h2>
+        </div>
+        <p>
+          Bienvenido a <strong class="text-white">Qbo: Cacho, Todis y Dados</strong> (en adelante, "la Aplicación" o "Qbo"), identificador de paquete / Application ID: <code class="text-secondary font-mono text-xs bg-white/5 px-2 py-0.5 rounded border border-white/10">dev.codedd.qbo</code>, disponible en Google Play Store para dispositivos Android.
+        </p>
+        <p>
+          El responsable del desarrollo, mantenimiento y soporte técnico de la aplicación es <strong class="text-white">Edward Cristóbal Díaz Valda</strong> (marca y alias profesional <strong class="text-white">CodEDD</strong>), con base de desarrollo en Sucre, Bolivia, y correo electrónico de contacto oficial: <a href={`mailto:${profileData.contact.email}`} class="text-primary hover:underline font-medium">{profileData.contact.email}</a>.
+        </p>
+        <p>
+          Qbo es una suite móvil de juegos de mesa y dados tradicionales (Cacho Alalay boliviano, Cacho Dudo, Todis, Mayor o Menor y Modo Libre). La aplicación funciona con un modelo presencial local (<em class="text-white">Pass &amp; Play</em>) diseñado para compartir el dispositivo físico en reuniones de amigos o familiares, sin necesidad de conexión a internet para disfrutar de las partidas.
+        </p>
+      </section>
+
+      <!-- Sección 2: Almacenamiento Local -->
+      <section id="seccion-2" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">02</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Información Almacenada Localmente (SharedPreferences)</h2>
+        </div>
+        <p>
+          Para mantener tus configuraciones entre partidas, Qbo almacena datos técnicos y preferencias exclusivamente en el almacenamiento interno privado del dispositivo mediante <code class="text-secondary font-mono text-xs">SharedPreferences</code> (<code class="text-secondary font-mono text-xs">/data/data/dev.codedd.qbo/shared_prefs/</code>). <strong>Ninguno de estos datos se envía a internet ni sale jamás de tu teléfono:</strong>
+        </p>
+
+        <!-- Tabla SharedPreferences -->
+        <div class="overflow-x-auto rounded-xl border border-white/10 my-4">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-surface-lowest text-white font-display border-b border-white/10">
+              <tr>
+                <th class="p-3 sm:p-4">Clave Técnica</th>
+                <th class="p-3 sm:p-4">Tipo</th>
+                <th class="p-3 sm:p-4">Finalidad en el Juego</th>
+                <th class="p-3 sm:p-4">¿Contiene Información Personal?</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-neutral-variant">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_sound_enabled</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">bool</td>
+                <td class="p-3 sm:p-4">Recordar si los efectos de audio y colisión de dados están encendidos o silenciados.</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_haptics_enabled</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">bool</td>
+                <td class="p-3 sm:p-4">Recordar si la vibración táctil al tirar dados está habilitada.</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_shake_enabled</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">bool</td>
+                <td class="p-3 sm:p-4">Activar o pausar la detección del acelerómetro para lanzar dados agitando el teléfono.</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_shake_sensitivity</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">double</td>
+                <td class="p-3 sm:p-4">Umbral numérico de fuerza G calibrado por el usuario (0.8g a 2.4g).</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_selected_dice_color</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">String</td>
+                <td class="p-3 sm:p-4">Color cosmético preferido para los dados 2D en Modo Libre (azul, rojo o verde).</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_recent_players</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">List&lt;String&gt;</td>
+                <td class="p-3 sm:p-4">Apodos o nombres locales temporales para la libreta de Cacho (ej. "Jugador 1", "Carlos").</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No (Alias locales, nunca sincronizados)</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_ad_roll_count</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">int</td>
+                <td class="p-3 sm:p-4">Contador local de tiros completados (regula la cadencia de anuncios a 1 cada 10 tiros).</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-mono text-white">qbo_ads_removed</td>
+                <td class="p-3 sm:p-4 font-mono text-secondary">bool</td>
+                <td class="p-3 sm:p-4">Estado booleano que registra si el usuario adquirió la compra integrada para eliminar la publicidad.</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-semibold">No</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección 3: Sensores y Hardware -->
+      <section id="seccion-3" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">03</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Sensores y Hardware del Dispositivo (Acelerómetro &amp; Hápticos)</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold flex items-center gap-2">
+              <span class="text-primary font-mono">▸</span> Detección de Agitado (Shake-to-Roll vía sensors_plus)
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Qbo incluye una mecánica inmersiva que permite lanzar los dados agitando físicamente el teléfono celular, simulando el movimiento de un cubilete tradicional. 
+            </p>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Las lecturas de aceleración en los ejes X, Y y Z son procesadas en tiempo real <strong>exclusivamente en la memoria RAM volátil</strong> mediante el cálculo de la norma vectorial neta (<span class="font-mono text-secondary">√(x² + y² + z²) / g</span>). En cuanto se verifica si se superó el umbral configurado por el usuario, <strong>los datos del sensor son descartados instantáneamente</strong>. No se graban, no se almacenan en disco y no se transmiten por la red.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold flex items-center gap-2">
+              <span class="text-primary font-mono">▸</span> Respuesta Háptica Táctil
+            </h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              Se utiliza el servicio nativo <code class="text-secondary font-mono text-xs">HapticFeedback</code> de Android para brindar una micro-vibración al colisionar los dados en el tablero virtual. No recopila datos y puede desactivarse libremente en los ajustes del juego.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 4: Permisos -->
+      <section id="seccion-4" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">04</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Permisos de Android y Seguridad</h2>
+        </div>
+        <p>
+          Qbo aplica el estándar de mínimo privilegio. En su manifiesto de Android (<code class="text-secondary text-xs">AndroidManifest.xml</code>) únicamente figuran los permisos técnicos requeridos para la red publicitaria y facturación:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl bg-surface-lowest border border-white/10">
+            <div class="flex items-center gap-2 font-mono text-white font-semibold mb-1">
+              <span class="text-emerald-400">✓</span> INTERNET
+            </div>
+            <p class="text-neutral-muted">
+              Necesario para conectar con los servidores de Google AdMob y consultar el estado de consentimiento UMP.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-surface-lowest border border-white/10">
+            <div class="flex items-center gap-2 font-mono text-white font-semibold mb-1">
+              <span class="text-emerald-400">✓</span> ACCESS_NETWORK_STATE
+            </div>
+            <p class="text-neutral-muted">
+              Permite a AdMob comprobar si existe conexión antes de solicitar anuncios, garantizando el juego fluido offline.
+            </p>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-surface-lowest border border-white/10">
+            <div class="flex items-center gap-2 font-mono text-white font-semibold mb-1">
+              <span class="text-emerald-400">✓</span> AD_ID (Google Play)
+            </div>
+            <p class="text-neutral-muted">
+              Identificador publicitario de Google en Android 13+ para servir anuncios personalizados o no personalizados según tu elección.
+            </p>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-rose-500/10 border border-rose-500/20 text-xs sm:text-sm text-neutral-variant">
+          <strong class="text-rose-300 block mb-1">Permisos NO solicitados ni utilizados:</strong>
+          Qbo <strong class="text-white">NO accede ni solicita permisos</strong> para: Cámara (<code class="text-rose-300">CAMERA</code>), Micrófono (<code class="text-rose-300">RECORD_AUDIO</code>), Ubicación GPS precisa o aproximada (<code class="text-rose-300">ACCESS_FINE_LOCATION</code>), Contactos / Agenda (<code class="text-rose-300">READ_CONTACTS</code>), Fotos o archivos externos (<code class="text-rose-300">READ_EXTERNAL_STORAGE</code>) ni estado del teléfono/IMEI (<code class="text-rose-300">READ_PHONE_STATE</code>).
+        </div>
+      </section>
+
+      <!-- Sección 5: Publicidad AdMob y RGPD -->
+      <section id="seccion-5" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">05</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Publicidad de Terceros y RGPD (Google AdMob &amp; UMP SDK)</h2>
+        </div>
+        <p>
+          Para mantener la aplicación gratuita sin requerir suscripciones obligatorias, Qbo integra la red de anuncios <strong class="text-white">Google Mobile Ads (AdMob)</strong>.
+        </p>
+        <div class="space-y-3">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold text-sm">Cadencia Respetuosa (Sin Spam)</h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              El formato utilizado son anuncios intersticiales a pantalla completa mostrados con una cadencia estrictamente limitada: la publicidad aparece únicamente tras completar <strong class="text-white">10 tiros reales de dados</strong>, con precarga silenciosa al tiro 7. Jamás interrumpe un turno activo ni bloquea el juego si juegas sin conexión a internet.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold text-sm">Consentimiento Europeo (RGPD / UMP SDK)</h3>
+            <p class="text-xs sm:text-sm text-neutral-variant">
+              En el Espacio Económico Europeo (EEE), Reino Unido y Suiza, Qbo inicializa el <strong class="text-white">Google User Messaging Platform (UMP) SDK</strong> bajo el estándar TCF v2.2 de IAB Europe. Los usuarios pueden elegir libremente entre aceptar anuncios personalizados, optar por anuncios limitados/no personalizados o rechazar proveedores publicitarios.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <h3 class="text-white font-semibold text-sm">Enlaces Oficiales de Google</h3>
+            <p class="text-xs text-neutral-muted">
+              Para conocer las políticas de tratamiento de datos de Google, consulta:
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline ml-1">Política de Privacidad de Google</a> y
+              <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline ml-1">Cómo utiliza Google los datos de sitios o apps asociados</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 6: In-App Purchases (Google Play Billing) -->
+      <section id="seccion-6" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">06</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Compras Integradas (Google Play Billing)</h2>
+        </div>
+        <p>
+          Qbo ofrece una compra dentro de la aplicación (<em class="text-white">In-App Purchase - IAP</em>) de tipo producto no consumible denominada <strong class="text-white">"Quitar Publicidad"</strong> (ID de producto: <code class="text-secondary font-mono text-xs bg-white/5 px-1.5 py-0.5 rounded">qbo_remove_ads</code>).
+        </p>
+        <p>
+          Al adquirir este producto:
+        </p>
+        <ul class="list-disc list-inside space-y-1.5 text-neutral-variant pl-2 text-xs sm:text-sm">
+          <li>Se desactiva de forma inmediata y permanente cualquier llamada, precarga o despliegue de anuncios en la aplicación.</li>
+          <li>La transacción financiera es procesada de extremo a extremo por los servidores seguros de <strong class="text-white">Google Play Store</strong>.</li>
+          <li><strong>CodEDD no recopila ni almacena jamás números de tarjeta de crédito, cuentas bancarias ni información de facturación del usuario.</strong></li>
+          <li>Puedes restaurar tu compra en cualquier dispositivo Android asociado a tu misma cuenta de Google Play en cualquier momento.</li>
+        </ul>
+      </section>
+
+      <!-- Sección 7: Menores y COPPA -->
+      <section id="seccion-7" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">07</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Clasificación de Contenido y Menores de Edad (COPPA &amp; IARC)</h2>
+        </div>
+        <p>
+          Qbo está destinada al público general a partir de los 13 años (clasificación PEGI 12 / Teen / IARC 12+) y no está dirigida de forma intencional a menores de 13 años según las directrices de la ley COPPA (<em class="text-white">Children's Online Privacy Protection Act</em>).
+        </p>
+        <div class="p-4 rounded-xl bg-primary/5 border border-primary/20 text-xs sm:text-sm text-neutral-variant space-y-2">
+          <strong class="text-white block">Aclaración sobre el minijuego social "Todis":</strong>
+          <p>
+            La aplicación incluye el juego social "Todis" (tradicionalmente conocido en reuniones como juego de fiesta: <em>Toma 1, Reparte 2, Todos toman, etc.</em>).
+          </p>
+          <p>
+            Qbo es un simulador digital y recreativo de dados para reuniones presenciales; <strong>no comercializa, no patrocina, no suministra ni obliga al consumo de bebidas alcohólicas</strong>. Los participantes son libres de adaptar la dinámica a cualquier contexto social lúdico (bebidas sin alcohol, penitencias cómicas, preguntas o golosinas).
+          </p>
+        </div>
+      </section>
+
+      <!-- Sección 8: Data Safety Form -->
+      <section id="seccion-8" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">08</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Formulario de Seguridad de los Datos de Google Play (Data Safety)</h2>
+        </div>
+        <p>
+          En conformidad con la sección de <em class="text-white">Data Safety</em> de Google Play Console, declaramos de forma verificable:
+        </p>
+        <div class="overflow-x-auto rounded-xl border border-white/10 my-4">
+          <table class="w-full text-left text-xs sm:text-sm">
+            <thead class="bg-surface-lowest text-white font-display border-b border-white/10">
+              <tr>
+                <th class="p-3 sm:p-4">Categoría</th>
+                <th class="p-3 sm:p-4">Tipo de Dato</th>
+                <th class="p-3 sm:p-4">¿Recopilado / Compartido?</th>
+                <th class="p-3 sm:p-4">Finalidad Principal</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5 text-neutral-variant">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Ubicación</td>
+                <td class="p-3 sm:p-4">Ubicación aproximada (inferida por IP)</td>
+                <td class="p-3 sm:p-4 text-amber-400">Sí (por SDK de AdMob)</td>
+                <td class="p-3 sm:p-4">Publicidad, prevención de fraudes y cumplimiento normativo.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Identificadores</td>
+                <td class="p-3 sm:p-4">ID de publicidad de Google (GAID)</td>
+                <td class="p-3 sm:p-4 text-amber-400">Sí (por SDK de AdMob)</td>
+                <td class="p-3 sm:p-4">Publicidad personalizada/no personalizada según consentimiento.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Diagnósticos</td>
+                <td class="p-3 sm:p-4">Registros de fallos de red y métricas</td>
+                <td class="p-3 sm:p-4 text-amber-400">Sí (por SDK de AdMob)</td>
+                <td class="p-3 sm:p-4">Rendimiento publicitario y diagnóstico de carga.</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Información Personal</td>
+                <td class="p-3 sm:p-4">Nombre, email, dirección, teléfono</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-bold">NO recopilado (0%)</td>
+                <td class="p-3 sm:p-4">No aplica (sin cuentas de usuario).</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-3 sm:p-4 font-semibold text-white">Información Financiera</td>
+                <td class="p-3 sm:p-4">Tarjetas o datos de pago</td>
+                <td class="p-3 sm:p-4 text-emerald-400 font-bold">NO recopilado por la app</td>
+                <td class="p-3 sm:p-4">Procesado 100% por Google Play Billing.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Sección 9: Derechos del Usuario -->
+      <section id="seccion-9" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">09</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Derechos del Usuario y Eliminación de Datos</h2>
+        </div>
+        <p>
+          Bajo el RGPD de la UE y las legislaciones de privacidad móvil, tienes garantizados tus derechos:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <span class="font-display font-semibold text-secondary block">Eliminación Total de Datos Locales:</span>
+            <p class="text-neutral-muted">
+              Como no almacenamos información en la nube, puedes borrar inmediatamente todas tus preferencias de Qbo desde:
+            </p>
+            <p class="text-white font-mono text-xs bg-white/5 p-2 rounded border border-white/10">
+              Ajustes de Android &rarr; Aplicaciones &rarr; Qbo &rarr; Almacenamiento &rarr; "Borrar datos" (o desinstalando la app).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-surface-lowest border border-white/10 space-y-2">
+            <span class="font-display font-semibold text-secondary block">Control del ID Publicitario:</span>
+            <p class="text-neutral-muted">
+              Puedes restablecer o eliminar tu Identificador de Publicidad móvil en cualquier instante desde:
+            </p>
+            <p class="text-white font-mono text-xs bg-white/5 p-2 rounded border border-white/10">
+              Ajustes de Android &rarr; Google &rarr; Todos los servicios &rarr; Anuncios &rarr; "Restablecer / Eliminar ID".
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección 10: Cambios y Contacto -->
+      <section id="seccion-10" class="bento-card p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-8 rounded-lg bg-primary/10 text-primary font-mono font-bold text-sm flex items-center justify-center border border-primary/20">10</span>
+          <h2 class="text-xl sm:text-2xl font-display font-bold text-white">Cambios en la Política y Contacto de Soporte</h2>
+        </div>
+        <p>
+          Esta Política de Privacidad puede actualizarse periódicamente para reflejar mejoras técnicas en el juego o nuevas directrices normativas de Google Play. Cualquier cambio será publicado en este mismo enlace web con la fecha de actualización correspondiente.
+        </p>
+
+        <!-- Card de Contacto -->
+        <div class="mt-6 p-5 rounded-2xl bg-gradient-to-r from-primary/10 to-secondary/10 border border-white/10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <h3 class="text-base font-display font-bold text-white">¿Tienes preguntas sobre Qbo o su privacidad?</h3>
+            <p class="text-xs sm:text-sm text-neutral-variant mt-1">
+              Para consultas legales, sugerencias de juegos o soporte sobre compras, contáctame directamente:
+            </p>
+            <div class="mt-2 text-xs font-mono text-neutral-muted space-y-0.5">
+              <p><span class="text-white">Desarrollador:</span> Edward Cristóbal Díaz Valda (CodEDD)</p>
+              <p><span class="text-white">Ubicación:</span> Sucre, Bolivia</p>
+            </div>
+          </div>
+
+          <a
+            href={`mailto:${profileData.contact.email}?subject=Consulta%20Privacidad%20Qbo`}
+            class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-primary to-secondary text-white font-medium text-xs sm:text-sm shadow-glow-primary hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] transition-all whitespace-nowrap"
+          >
+            Contactar por Email
+          </a>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Bottom Actions & Back link -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs text-neutral-muted">
+      <p>
+        Documento oficial de Política de Privacidad para <strong class="text-white">Qbo: Cacho, Todis y Dados</strong> (`dev.codedd.qbo`). Válido para Google Play Store.
+      </p>
+      <a
+        href="/"
+        class="text-primary hover:text-white transition-colors flex items-center gap-1 font-medium"
+      >
+        <span>Volver a la portada de CodEDD</span>
+        <span>&rarr;</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>
